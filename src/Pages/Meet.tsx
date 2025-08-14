@@ -1,61 +1,151 @@
 import Layout from "../components/Layout";
 import theClobberImage from '/src/assets/TheClobber.png';
+import { Twitter, Twitch } from 'lucide-react';
 
 function Meet() {
     return (
         <Layout>
-            <div className="min-h-screen grid grid-rows-4 gap-5 p-4 bg-red-700">
+            <div className="min-h-screen grid grid-rows-4 gap-10 p-20 bg-red-700">
                 {/* Top row */}
                 <div className="grid grid-cols-4 gap-4 w-full">
-                    <div className="bg-gray-700 col-span-3 flex flex-col justify-start items-around h-full">
-                        <div className="h-1/5 w-full mx-3 p-3 flex flex-row bg-blue-400">
-                            <div className='w-full max-h-1/5'>
-                                <h1 className='text-3xl font-bold text-black flex flex-col justify-start items-start'> The Clobber </h1>
+                    <div className="bg-zinc-800 col-span-3 flex flex-col justify-start items-around h-full rounded-xl">
+                        <div className="h-1/5 w-full mx-3 my-2 p-3 flex flex-row justify-center">
+                            <div className='w-full max-h-1/5 flex flex-row pb-10 ml-7 mt-2 '>
+                                <h1 className="text-4xl text-zinc-400 font-bold"> 585z &nbsp; </h1> <h1 className="text-4xl text-zinc-400"> | &nbsp; </h1> <h1 className='text-4xl font-bold text-zinc-200 flex flex-col justify-start items-start'> <em>"The Clobber"</em> </h1> <h2 className="text-4xl text-gray-400"> &nbsp; | </h2> <h2 className="text-3xl text-zinc-400 translate-y-1"> &nbsp; Aidan Seaburg </h2>
                             </div>
                         </div>
-                         <div className="h-1 w-11/12 bg-grey-900 "></div>
-                        <div className="h-full w-full bg-green-400 p-4">
-                            <div className="h-1/4 bg-blue-400 flex flex-col items-start translate-x-5 text-black font-bold text-xl"> Social Media Guru </div>
-                            <div className="h-3/4 bg-yellow-600 flex flex-col items-start"> <p className="text-lg"> <br/>He clobs on his ster til it's time <br/> Graduated from SUNY Brockport, Aidan enjoys spending his free time climbing, playing Tekken, Street Fighter and watching NorthernLion shorts on Youtube </p></div>
+                        {/* Line */}
+                        <div className="h-1 w-full bg-zinc-600"></div>
+                        {/* Inside info */}
+                        <div className="h-full w-full p-4 rounded-b-lg mr-10 bg-zinc-900">
+                            <div className="max-h-1/4 bg-zinc-900 flex flex-col items-start translate-x-5 text-zinc-400 font-bold text-xl justify-center w-fit overflow-hidden "> <h2 className="italic text-2xl underline"> Social Media Guru </h2></div>
+                            <div className="h-1 w-full ">  </div>
+                            <div className="h-3/4 flex flex-col items-start px-5"> <p className="text-xl text-left"> <br/><em> He "clobs" on his "ster" 'til it's time </em><br/> <br/> Graduated from SUNY Brockport, Aidan enjoys spending his free time climbing, playing Tekken, Street Fighter and watching NorthernLion shorts on Youtube <br/> </p></div>
                         </div>
                     </div>
                     {/* PFP */}
-                    <div className="grid grid-rows-2 h-full justify-center items-center">
-                        <div className="col-span-1 flex flex-col justify-center items-center">
-                            <img src={theClobberImage} className="h-full"></img> 
+                    <div className="flex flex-col h-full w-full justify-center items-start ">
+                            <div className="h-full pt-5 bg-zinc-800 rounded-lg w-4/5">
+                                <div className="flex flex-col justify-center items-center h-4/5">
+                                    <img src={theClobberImage} className="w-3/5"></img> 
+                                </div>
+                                <div className="h-1/5 bg-zinc-900 b-top-zinc-800 flex flex-row items-center justify-around rounded-b-lg"> 
+                                    {/* Links row */}
+                                    <div className="w-11/12 flex flex-row items-center justify-center gap-px"> 
+                                    <div className="flex flex-row"><Twitter/> <p> &nbsp; @The Clobber</p></div>
+                                    <div> &nbsp; &nbsp; </div>
+                                    <div className="flex flex-row"><Twitch/> <p> &nbsp; @The Clobber</p></div>
+                                    </div> 
+                                </div>
                         </div>
-                        <div> @'s </div>
                     </div>
                 </div>
 
                 {/* 2nd row */}
                 <div className="grid grid-cols-4 gap-4 w-full h-40 max-h-1/5">
-                    <div className="bg-blue-300 col-span-1">
-                        <img src={theClobberImage}></img> 
-                    </div> 
-                    <div className="bg-gray-600 col-span-3 flex felx-col justify-center items-center"> 
-                        <h1 className='text-3xl font-bold text-black'> The Clobber </h1>
-                    </div> 
+                    {/* PFP */}
+                    <div className="flex flex-col h-full w-full justify-center items-end">
+                            <div className="h-full pt-5 bg-zinc-800 rounded-lg w-4/5">
+                                <div className="flex flex-col justify-center items-center h-4/5">
+                                    <img src={theClobberImage} className="w-3/5"></img> 
+                                </div>
+                                <div className="h-1/5 bg-zinc-900 b-top-zinc-800 flex flex-row items-center justify-around rounded-b-lg"> 
+                                    {/* Links row */}
+                                    <div className="w-11/12 flex flex-row items-center justify-center gap-px"> 
+                                    <div className="flex flex-row"><Twitter/> <p> &nbsp; @The Clobber</p></div>
+                                    <div> &nbsp; &nbsp; </div>
+                                    <div className="flex flex-row"><Twitch/> <p> &nbsp; @The Clobber</p></div>
+                                    </div> 
+                                </div>
+                        </div>
+                    </div>
+                    {/* About */}
+                    <div className="bg-zinc-800 col-span-3 flex flex-col justify-start items-around h-full rounded-xl">
+                        <div className="h-1/5 w-full mx-3 my-2 p-3 flex flex-row justify-center">
+                            <div className='w-full max-h-1/5 flex flex-row pb-10 ml-7 mt-2 '>
+                                <h1 className="text-4xl text-zinc-400 font-bold"> 585z &nbsp; </h1> <h1 className="text-4xl text-zinc-400"> | &nbsp; </h1> <h1 className='text-4xl font-bold text-zinc-200 flex flex-col justify-start items-start'> <em>"The Clobber"</em> </h1> <h2 className="text-4xl text-gray-400"> &nbsp; | </h2> <h2 className="text-3xl text-zinc-400 translate-y-1"> &nbsp; Aidan Seaburg </h2>
+                            </div>
+                        </div>
+                        {/* Line */}
+                        <div className="h-1 w-full bg-zinc-600"></div>
+                        {/* Inside info */}
+                        <div className="h-full w-full p-4 rounded-b-lg mr-10 bg-zinc-900">
+                            <div className="max-h-1/4 bg-zinc-900 flex flex-col items-start translate-x-5 text-zinc-400 font-bold text-xl justify-center w-fit overflow-hidden "> <h2 className="italic text-2xl underline"> Social Media Guru </h2></div>
+                            <div className="h-1 w-full ">  </div>
+                            <div className="h-3/4 flex flex-col items-start px-5"> <p className="text-xl text-left"> <br/><em> He "clobs" on his "ster" 'til it's time </em><br/> <br/> Graduated from SUNY Brockport, Aidan enjoys spending his free time climbing, playing Tekken, Street Fighter and watching NorthernLion shorts on Youtube <br/> </p></div>
+                        </div>
+                    </div>
                 </div>
 
                 {/* 3rd row */}
-                <div className="grid grid-cols-4 gap-4 w-full h-40">
-                    <div className="bg-gray-600 col-span-3 flex felx-col justify-center items-center"> 
-                        <h1 className='text-3xl font-bold text-black'> The Clobber </h1>
-                    </div> 
-                    <div className="bg-blue-300 col-span-1">
-                        <img src={theClobberImage}></img> 
+                <div className="grid grid-cols-4 gap-4 w-full">
+                    <div className="bg-zinc-800 col-span-3 flex flex-col justify-start items-around h-full rounded-xl">
+                        <div className="h-1/5 w-full mx-3 my-2 p-3 flex flex-row justify-center">
+                            <div className='w-full max-h-1/5 flex flex-row pb-10 ml-7 mt-2 '>
+                                <h1 className="text-4xl text-zinc-400 font-bold"> 585z &nbsp; </h1> <h1 className="text-4xl text-zinc-400"> | &nbsp; </h1> <h1 className='text-4xl font-bold text-zinc-200 flex flex-col justify-start items-start'> <em>"The Clobber"</em> </h1> <h2 className="text-4xl text-gray-400"> &nbsp; | </h2> <h2 className="text-3xl text-zinc-400 translate-y-1"> &nbsp; Aidan Seaburg </h2>
+                            </div>
+                        </div>
+                        {/* Line */}
+                        <div className="h-1 w-full bg-zinc-600"></div>
+                        {/* Inside info */}
+                        <div className="h-full w-full p-4 rounded-b-lg mr-10 bg-zinc-900">
+                            <div className="max-h-1/4 bg-zinc-900 flex flex-col items-start translate-x-5 text-zinc-400 font-bold text-xl justify-center w-fit overflow-hidden "> <h2 className="italic text-2xl underline"> Social Media Guru </h2></div>
+                            <div className="h-1 w-full ">  </div>
+                            <div className="h-3/4 flex flex-col items-start px-5"> <p className="text-xl text-left"> <br/><em> He "clobs" on his "ster" 'til it's time </em><br/> <br/> Graduated from SUNY Brockport, Aidan enjoys spending his free time climbing, playing Tekken, Street Fighter and watching NorthernLion shorts on Youtube <br/> </p></div>
+                        </div>
+                    </div>
+                    {/* PFP */}
+                    <div className="flex flex-col h-full w-full justify-center items-start ">
+                            <div className="h-full pt-5 bg-zinc-800 rounded-lg w-4/5">
+                                <div className="flex flex-col justify-center items-center h-4/5">
+                                    <img src={theClobberImage} className="w-3/5"></img> 
+                                </div>
+                                <div className="h-1/5 bg-zinc-900 b-top-zinc-800 flex flex-row items-center justify-around rounded-b-lg"> 
+                                    {/* Links row */}
+                                    <div className="w-11/12 flex flex-row items-center justify-center gap-px"> 
+                                    <div className="flex flex-row"><Twitter/> <p> &nbsp; @The Clobber</p></div>
+                                    <div> &nbsp; &nbsp; </div>
+                                    <div className="flex flex-row"><Twitch/> <p> &nbsp; @The Clobber</p></div>
+                                    </div> 
+                                </div>
+                        </div>
                     </div>
                 </div>
 
                 {/* Bottom row */}
-                <div className="grid grid-cols-4 gap-4 w-full h-40">
-                    <div className="bg-blue-300 col-span-1">
-                        <img src={theClobberImage}></img> 
-                    </div> 
-                    <div className="bg-gray-600 col-span-3 flex felx-col justify-center items-center"> 
-                        <h1 className='text-3xl font-bold text-black'> The Clobber </h1>
-                    </div> 
+                <div className="grid grid-cols-4 gap-4 w-full h-40 max-h-1/5">
+                    {/* PFP */}
+                    <div className="flex flex-col h-full w-full justify-center items-end">
+                            <div className="h-full pt-5 bg-zinc-800 rounded-lg w-4/5">
+                                <div className="flex flex-col justify-center items-center h-4/5">
+                                    <img src={theClobberImage} className="w-3/5"></img> 
+                                </div>
+                                <div className="h-1/5 bg-zinc-900 b-top-zinc-800 flex flex-row items-center justify-around rounded-b-lg"> 
+                                    {/* Links row */}
+                                    <div className="w-11/12 flex flex-row items-center justify-center gap-px"> 
+                                    <div className="flex flex-row"><Twitter/> <p> &nbsp; @The Clobber</p></div>
+                                    <div> &nbsp; &nbsp; </div>
+                                    <div className="flex flex-row"><Twitch/> <p> &nbsp; @The Clobber</p></div>
+                                    </div> 
+                                </div>
+                        </div>
+                    </div>
+                    {/* About */}
+                    <div className="bg-zinc-800 col-span-3 flex flex-col justify-start items-around h-full rounded-xl">
+                        <div className="h-1/5 w-full mx-3 my-2 p-3 flex flex-row justify-center">
+                            <div className='w-full max-h-1/5 flex flex-row pb-10 ml-7 mt-2 '>
+                                <h1 className="text-4xl text-zinc-400 font-bold"> 585z &nbsp; </h1> <h1 className="text-4xl text-zinc-400"> | &nbsp; </h1> <h1 className='text-4xl font-bold text-zinc-200 flex flex-col justify-start items-start'> <em>"The Clobber"</em> </h1> <h2 className="text-4xl text-gray-400"> &nbsp; | </h2> <h2 className="text-3xl text-zinc-400 translate-y-1"> &nbsp; Aidan Seaburg </h2>
+                            </div>
+                        </div>
+                        {/* Line */}
+                        <div className="h-1 w-full bg-zinc-600"></div>
+                        {/* Inside info */}
+                        <div className="h-full w-full p-4 rounded-b-lg mr-10 bg-zinc-900">
+                            <div className="max-h-1/4 bg-zinc-900 flex flex-col items-start translate-x-5 text-zinc-400 font-bold text-xl justify-center w-fit overflow-hidden "> <h2 className="italic text-2xl underline"> Social Media Guru </h2></div>
+                            <div className="h-1 w-full ">  </div>
+                            <div className="h-3/4 flex flex-col items-start px-5"> <p className="text-xl text-left"> <br/><em> He "clobs" on his "ster" 'til it's time </em><br/> <br/> Graduated from SUNY Brockport, Aidan enjoys spending his free time climbing, playing Tekken, Street Fighter and watching NorthernLion shorts on Youtube <br/> </p></div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
