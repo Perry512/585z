@@ -32,10 +32,11 @@ function Meet() {
                                 </div>
                                 <div className="h-1/5 bg-zinc-900 b-top-zinc-800 flex flex-row items-center justify-around rounded-b-lg"> 
                                     {/* Links row */}
-                                    <div className="w-11/12 flex flex-row items-center justify-center gap-px"> 
+                                    <div className="w-11/12 flex flex-row items-center justify-center gap-px overflow-y-auto"> 
                                         <SocialLink mediaType="SiX" usersName="The Clobber" usersLink="https://visdeurbel.nl/en/" />
                                         <div> &nbsp; &nbsp; </div>
                                         <SocialLink mediaType="SiTwitch" usersName="The Clobber" usersLink="https://visdeurbel.nl/en/"/>
+                                        <SocialLink mediaType="SiStartdotgg" usersName="The Clobber" />
                                     </div> 
                                 </div>
                         </div>

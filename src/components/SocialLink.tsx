@@ -18,6 +18,6 @@ export default function SocialLink ({ mediaType, usersName, usersLink = "https:/
     const MediaType = icons[mediaType];
 
     return (
-        <div className="flex flex-row"> <MediaType /> <p> &nbsp;<a target="_blank" href={usersLink} rel="noopener noreferrer" className="text-white hover:text-white">{usersName}</a></p></div>
+        <div className="flex flex-row items-center"> <MediaType /> <p> &nbsp;<a target="_blank" href={usersLink} rel="noopener noreferrer" className="text-white hover:text-white">{usersName}</a></p></div>
     )
 }
