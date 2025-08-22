@@ -147,7 +147,6 @@ function Meet() {
                         </div>
                     </div>
                 </div>
-
             </div>
         </Layout>
     )
