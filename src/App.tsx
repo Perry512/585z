@@ -5,6 +5,7 @@ import Links from './Pages/Links';
 import Meet from './Pages/Meet';
 import Who from './Pages/Who';
 import Footer from './components/Footer';
+import ContactFormPage from './Pages/ContactFormPage';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Who />
       <Meet />
       <Links />
+      <ContactFormPage />
       <Footer />
     </div>
   )
