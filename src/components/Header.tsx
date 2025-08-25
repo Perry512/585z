@@ -17,7 +17,7 @@ function Header () {
                 <div className="flex flex-row justify-around">
                     <ul>
                         <li className="inline-block mr-10"> {open ? <p> Open </p> : <p> Closed </p>} </li>
-                        <li className="inline-block mr-10"> 1 </li>
+                        <li className="inline-block mr-10"> <a href='/#/' rel="noopener noreferrer" className='text-black text-xl hover:text-blue-100'> Contact Us! </a> </li>
                         <li className="inline-block mr-10"> 2 </li>
                         <li className="inline-block mr-10"> 3 </li>
                     </ul>
