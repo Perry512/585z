@@ -15,8 +15,8 @@ function App() {
       <Home />
       <Who />
       <Meet />
-      <Links />
       <ContactFormPage />
+      <Links />
       <Footer />
     </div>
   )
