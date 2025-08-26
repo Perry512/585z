@@ -4,7 +4,7 @@ function Home() {
 
     return (
     <>
-        <div className='bg-cover bg-center h-screen max-h-screen w-full flex flex-col justify-evenly items-center' style={{ backgroundImage: `url(${dtr})`}}>
+        <div className='bg-cover bg-center h-screen max-h-screen w-full flex flex-col justify-evenly items-center bg-no-repeat bg-fixed' style={{ backgroundImage: `url(${dtr})`}}>
             <div className='m-4 bg-gray-800 bg-opacity-90 p-5 rounded-lg'>
                 <h1 className='text-4xl font-bold text-white'> Rochester's Newest Fighting Game Home </h1>
             </div>
