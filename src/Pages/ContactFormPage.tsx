@@ -3,13 +3,13 @@ import Layout from "../components/Layout"
 export default function ContactFormPage () {
     return(
         <Layout>
-            <div className='h-50vh w-screen bg-red-700 p-1 flex flex-col items-center justify-around '>
+            <div className='h-50vh w-100vh bg-red-700 p-1 flex flex-col items-center justify-around '>
 
                 {/* Contact form header */}
-                <div className="p-5 bg-slate-600 w-auto mb-10"> <h1 className="font-bold text-black"> Contact Us!</h1> </div> 
+                <div className="p-4 w-auto mb-10 flex flex-col items-center justify-center"> <h1 className="font-bold text-black"> Contact Us!</h1> </div> 
 
                 { /* Contact form */}
-                <div className="py-10 flex flex-row border-2 justify-center items-center border-black w-2xl max-w-md mx-auto bg-white mb-10">
+                <div className="py-10 flex flex-row border-2 justify-center items-center border-black w-4/5 max-w-md mx-auto bg-white mb-10">
                     <form>
                         <div>
                             <label htmlFor="name" className="block text-sm font-medium text-gray-700"> Name </label>
