@@ -1,4 +1,5 @@
 import Layout from "../components/Layout";
+import WhoAreWeSection from "../components/WhoAreWeSection";
 
 function Who() {
 
@@ -11,15 +12,10 @@ function Who() {
                     <p className='text-white'> We play video games in Innonvation tower sometimes for money </p>
                 </div>
                 <div className="flex flex-row items-center">
-                    <div>
-                        <img src={discordLink} className="size-auto"></img>
-                    </div>
-                    <div>
-                        <img src={discordLink} className="size-auto"></img>
-                    </div>
-                    <div>
-                        <img src={discordLink} className="size-auto"></img>
-                    </div>
+                    <WhoAreWeSection photo={discordLink} headDescription="Section 1" footDescription="feet"/>
+                    <WhoAreWeSection photo={discordLink} headDescription="Section 1" footDescription="feet"/>
+                    <WhoAreWeSection photo={discordLink} headDescription="Section 1" footDescription="feet"/>
+                    
                 </div>
             </div>
             
