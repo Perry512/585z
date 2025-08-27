@@ -11,10 +11,10 @@ function Who() {
                     <h1 className='text-3xl font-bold text-white'> Who Are We? </h1>
                     <p className='text-white'> We play video games in Innonvation tower sometimes for money </p>
                 </div>
-                <div className="flex flex-row items-center">
+                <div className="flex flex-col items-center md:flex-row gap-5">
                     <WhoAreWeSection photo={discordLink} headDescription="Section 1" footDescription="feet"/>
-                    <WhoAreWeSection photo={discordLink} headDescription="Section 1" footDescription="feet"/>
-                    <WhoAreWeSection photo={discordLink} headDescription="Section 1" footDescription="feet"/>
+                    <WhoAreWeSection photo={discordLink} headDescription="Section 2" footDescription="feet"/>
+                    <WhoAreWeSection photo={discordLink} headDescription="Section 3" footDescription="feet"/>
                     
                 </div>
             </div>
