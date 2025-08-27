@@ -8,8 +8,13 @@ function Home() {
             <div className='m-4 bg-gray-800 bg-opacity-90 p-5 rounded-lg'>
                 <h1 className='text-4xl font-bold text-white'> Rochester's Newest Fighting Game Home </h1>
             </div>
-            <div className='bg-gray-800 bg-opactiy-90 p-t rounded-lg h-1/2 w-1/2 flex flex-col justify-center items-center'>
-                <h1 className='text-6xl font-bold'>CONTENT GOES HERE</h1>
+            <div className='bg-gray-800 bg-opacity-60 rounded-lg h-1/2 w-1/2 flex flex-col justify-center items-center'>
+                <iframe 
+                    src="https://player.twitch.tv/?video=2547779457&parent=localhost&muted=true&autoplay=true"
+                    height="80%"
+                    width="80%"
+                    allowFullScreen>
+                </iframe>
             </div>
         </div>
     </>
