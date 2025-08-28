@@ -6,7 +6,7 @@ function Meet() {
 
     return (
         <Layout>
-            <div className="min-h-screen grid grid-rows-4 gap-10 p-20 bg-red-700">
+            <div className="min-h-screen grid grid-rows-4 gap-10 p-20 mt-20 bg-red-700">
                 {/* Top row */}
                 <div className="grid grid-cols-4 gap-4 w-full">
                     <div className="bg-zinc-800 col-span-3 flex flex-col justify-start items-around h-full rounded-xl">
