@@ -12,8 +12,8 @@ function Home() {
                 <div className='bg-gray-800 bg-opacity-60 rounded-lg h-1/2 w-1/2 flex flex-col justify-center items-center'>
                     <iframe 
                         src="https://player.twitch.tv/?video=2547779457&parent=localhost&muted=true&autoplay=true"
-                        height="80%"
-                        width="80%"
+                        height="90%"
+                        width="90%"
                         allowFullScreen>
                     </iframe>
                 </div>
