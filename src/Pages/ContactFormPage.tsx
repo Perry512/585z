@@ -3,7 +3,7 @@ import Layout from "../components/Layout"
 export default function ContactFormPage () {
     return(
         <Layout>
-            <div className='h-50vh w-100vh bg-red-700 p-1 flex flex-col items-center justify-around '>
+            <div className='h-50vh w-100vh bg-red-700 p-1 flex flex-col items-center justify-around' id="contact">
 
                 {/* Contact form header */}
                 <div className="p-4 w-auto mb-5 flex flex-col items-center justify-center"> <h1 className="font-bold text-black"> Contact Us!</h1> </div> 
