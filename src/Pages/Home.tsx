@@ -1,5 +1,9 @@
+import { lazy, Suspense } from 'react';
 import dtr from '../assets/dtr.jpg'
 import Layout from '../components/Layout';
+
+const HomePageVideo = lazy(() => import ('../components/HomePageVideo'));
+//import HomePageVideo from '../components/HomePageVideo';
 
 function Home() {
 
@@ -10,12 +14,9 @@ function Home() {
                     <h1 className='text-4xl font-bold text-white'> Rochester's Newest Fighting Game Home </h1>
                 </div>
                 <div className='bg-gray-800 bg-opacity-60 rounded-lg h-1/2 w-1/2 flex flex-col justify-center items-center'>
-                    <iframe 
-                        src="https://player.twitch.tv/?video=2547779457&parent=localhost&muted=true&autoplay=true"
-                        height="90%"
-                        width="90%"
-                        allowFullScreen>
-                    </iframe>
+                    <Suspense fallback={<p className='text-white'>Loading content...</p>}>
+                        <HomePageVideo />
+                    </Suspense>
                 </div>
             </div>
         </Layout>
