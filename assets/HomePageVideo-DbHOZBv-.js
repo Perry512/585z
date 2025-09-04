@@ -1,0 +1,1 @@
+import{j as e}from"./index-Dj4A54EC.js";function l(){return e.jsx("div",{className:"h-full w-full flex flex-col items-center justify-center",children:e.jsx("iframe",{src:"https://player.twitch.tv/?video=2547779457&parent=localhost&parent=github&muted=true&autoplay=true",height:"90%",width:"90%",allowFullScreen:!0})})}export{l as default};
