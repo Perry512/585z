@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import logo from '../assets/585zLogo.png';
 
 function Header () {
 
@@ -10,7 +11,7 @@ function Header () {
             <header className="bg-red-800 flex flex-wrap justify-between items-center w-full p-5">    
                 <div className='flex flex-row justify-center mx-10'>
                     <a className="flex items-center" href="#home">
-                        <img src="./src/assets/585zLogo.png" className="mr-3 h-6 sm:h-9" alt="585z Logo" />
+                        <img src={logo} className="mr-3 h-6 sm:h-9" alt="585z Logo" />
                         <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white" id='home'>585 FighterZ</span>
                     </a>
                 </div>
