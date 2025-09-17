@@ -1,6 +1,6 @@
 import Layout from "../components/Layout";
 import WhoAreWeSection from "../components/WhoAreWeSection";
-import { useFadeInOnScroll } from "../components/UseFadeInOnScroll";
+import { useFadeInOnScroll } from "../hooks/UseFadeInOnScroll";
 
 import asset1 from "../assets/asset1.png"
 import asset2 from "../assets/asset2.png"

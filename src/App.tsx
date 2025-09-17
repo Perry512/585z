@@ -1,11 +1,11 @@
 import './App.css'
 import Header from './components/Header';
-import Home from './Pages/Home';
-import Links from './Pages/Links';
-import Meet from './Pages/Meet';
-import Who from './Pages/Who';
+import Home from './pages/Home';
+import Links from './pages/Links';
+import Meet from './pages/Meet';
+import Who from './pages/Who';
 import Footer from './components/Footer';
-import ContactFormPage from './Pages/ContactFormPage';
+import ContactFormPage from './pages/ContactFormPage';
 
 function App() {
 

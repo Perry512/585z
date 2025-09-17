@@ -17,6 +17,10 @@
   
 }
 
+:root:has(.no-doc-scroll) {
+  overflow:hidden !important;
+}
+
 #root { 
   width: 100%;
   background-color: #242424 !important;

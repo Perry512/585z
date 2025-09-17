@@ -1,10 +1,12 @@
 import { useState } from 'react';
-
+import { useModal } from '../hooks/useModal';
+import Modal from './Modal';
 import logo from '../assets/585zLogo.png';
 
 function Header () {
-
     const [open, setOpen] = useState<boolean>(false);
+
+    const { isOpen, openModal, closeModal } = useModal();
 
     return ( 
         <>
@@ -24,9 +26,19 @@ function Header () {
                     </ul>
                 </div>
                 <div className="text-white">
-                    <button onClick={() => setOpen(!open)}> Test </button>
+                    <button onClick={openModal}> Test </button>
                 </div>
             </header>
+            <Modal isOpen={isOpen} onClose={closeModal}>
+                <h2 className="text-xl font-bold mb-4">This is a Modal</h2>
+                <p className="mb-4">Scrolling beneath is locked 🎉</p>
+                <button
+                    onClick={closeModal}
+                    className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+                    >
+                    Close
+                </button>
+            </Modal>
         </>
     )
 }
