@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { useModal } from '../hooks/useModal';
 import Modal from './Modal';
+import TheClobber from '../assets/TheClobber.png';
 import logo from '../assets/585zLogo.png';
+import DisplayPerson from '../views/DisplayPerson';
 
 function Header () {
     const [open, setOpen] = useState<boolean>(false);
@@ -30,14 +32,15 @@ function Header () {
                 </div>
             </header>
             <Modal isOpen={isOpen} onClose={closeModal}>
-                <h2 className="text-xl font-bold mb-4">This is a Modal</h2>
-                <p className="mb-4">Scrolling beneath is locked 🎉</p>
-                <button
-                    onClick={closeModal}
-                    className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
-                    >
-                    Close
-                </button>
+                <DisplayPerson 
+                    name="Aidan Seaburg"
+                    pronouns="He/Him"
+                    role="Media Producer"
+                    location="Rochester, NY"
+                    contact="@The Clobber"
+                    bio="Graduated from SUNY Brockport, Aidan enjoys spending his free time climbing, playing Tekken, Street Fighter and watching NorthernLion shorts on Youtube"  
+                    imageUrl={TheClobber}  
+                />
             </Modal>
         </>
     )
