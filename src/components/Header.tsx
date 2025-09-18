@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useModal } from '../hooks/useModal';
 import Modal from './Modal';
 import TheClobber from '../assets/TheClobber.png';
@@ -6,8 +5,6 @@ import logo from '../assets/585zLogo.png';
 import DisplayPerson from '../views/DisplayPerson';
 
 function Header () {
-    const [open, setOpen] = useState<boolean>(false);
-
     const { isOpen, openModal, closeModal } = useModal();
 
     return ( 
@@ -21,7 +18,6 @@ function Header () {
                 </div>
                 <div className="flex flex-row justify-around">
                     <ul>
-                        <li className="inline-block mr-10"> {open ? <p> Open </p> : <p> Closed </p>} </li>
                         <li className="inline-block mr-10"> <a href='#contact' rel="noopener noreferrer" className='text-black text-xl hover:text-blue-100 transition duration-300 ease-in-out'> Contact Us! </a> </li>
                         <li className="inline-block mr-10"> 2 </li>
                         <li className="inline-block mr-10"> 3 </li>
