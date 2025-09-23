@@ -21,7 +21,7 @@ function Header () {
                     <ul>
                         <li className="inline-block mr-10"> <a href='#contact' rel="noopener noreferrer" className='text-black text-xl hover:text-blue-100 transition duration-300 ease-in-out'> Contact Us! </a> </li>
                         <li className="inline-block mr-10"> 
-                            <Link to="/calendar" className="text-black hover:text-blue-100 transition duration-300 ease-in-out">
+                            <Link to="/gallery" className="text-black hover:text-blue-100 transition duration-300 ease-in-out">
                                 Gallery
                             </Link>
                         </li>
