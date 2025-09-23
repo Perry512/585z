@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useModal } from '../hooks/useModal';
 import Modal from './Modal';
 import TheClobber from '../assets/TheClobber.png';
@@ -19,8 +20,21 @@ function Header () {
                 <div className="flex flex-row justify-around">
                     <ul>
                         <li className="inline-block mr-10"> <a href='#contact' rel="noopener noreferrer" className='text-black text-xl hover:text-blue-100 transition duration-300 ease-in-out'> Contact Us! </a> </li>
-                        <li className="inline-block mr-10"> 2 </li>
-                        <li className="inline-block mr-10"> 3 </li>
+                        <li className="inline-block mr-10"> 
+                            <Link to="/calendar" className="text-black hover:text-blue-100 transition duration-300 ease-in-out">
+                                Gallery
+                            </Link>
+                        </li>
+                        <li className="inline-block mr-10"> 
+                            <Link to="/calendar" className="text-black hover:text-blue-100 transition duration-300 ease-in-out">
+                                Test Page 
+                            </Link>
+                        </li>
+                        <li className="inline-block mr-10"> 
+                            <Link to="/home" className="text-black hover:text-blue-100 transition duration-300 ease-in-out">
+                                Home Page 
+                            </Link>
+                        </li>
                     </ul>
                 </div>
                 <div className="text-white">
