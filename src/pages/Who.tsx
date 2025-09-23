@@ -4,7 +4,7 @@ import { useFadeInOnScroll } from "../hooks/UseFadeInOnScroll";
 
 import asset1 from "../assets/asset1.png"
 import asset2 from "../assets/asset2.png"
-import asset3 from "../assets/asset3.png"
+// import asset3 from "../assets/asset3.png"
 
 function Who() {
 
