@@ -1,11 +1,11 @@
 import MeetV2 from "./MeetV2";
 import ContactFormPage from "./ContactFormPage";
-import PhotoGallery from "./PhotoGallery";
+import CalendarPage from "./CalendarPage";
 
 const TestPage = () => {
     return (
         <>
-            <PhotoGallery />
+            <CalendarPage />
             <MeetV2 />
             <ContactFormPage />
         </>
