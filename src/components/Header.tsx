@@ -4,6 +4,7 @@ import Modal from './Modal';
 import TheClobber from '../assets/TheClobber.png';
 import logo from '../assets/585zLogo.png';
 import DisplayPerson from '../views/DisplayPerson';
+import { GiAcousticMegaphone } from 'react-icons/gi';
 
 function Header () {
     const { isOpen, openModal, closeModal } = useModal();
@@ -14,31 +15,33 @@ function Header () {
                 <div className='flex flex-row justify-center mx-10'>
                     <a className="flex items-center" href="#home">
                         <img src={logo} className="mr-3 h-6 sm:h-9" alt="585z Logo" />
-                        <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white" id='home'>585 FighterZ</span>
+                        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white" id='home'>585 FighterZ</span>
                     </a>
-                </div>
-                <div className="flex flex-row justify-around">
-                    <ul>
-                        <li className="inline-block mr-10"> <a href='#contact' rel="noopener noreferrer" className='text-black text-xl hover:text-blue-100 transition duration-300 ease-in-out'> Contact Us! </a> </li>
+                    <ul className='ml-10 translate-y-px'>
                         <li className="inline-block mr-10"> 
-                            <Link to="/gallery" className="text-black hover:text-blue-100 transition duration-300 ease-in-out">
+                            <Link to="/home" className="text-black hover:text-blue-100 transition duration-300 ease-in-out text-lg">
+                                Home Page 
+                            </Link>
+                        </li>
+                        <li className="inline-block mr-10"> 
+                            <Link to="/gallery" className="text-black hover:text-blue-100 transition duration-300 ease-in-out text-lg">
                                 Gallery
                             </Link>
                         </li>
                         <li className="inline-block mr-10"> 
-                            <Link to="/calendar" className="text-black hover:text-blue-100 transition duration-300 ease-in-out">
+                            <Link to="/calendar" className="text-black hover:text-blue-100 transition duration-300 ease-in-out text-lg">
                                 Test Page 
                             </Link>
                         </li>
-                        <li className="inline-block mr-10"> 
-                            <Link to="/home" className="text-black hover:text-blue-100 transition duration-300 ease-in-out">
-                                Home Page 
-                            </Link>
+                        <li className="inline-block mr-10">
+                            <a href='#contact' rel="noopener noreferrer" className='text-black text-lg hover:text-blue-100 transition duration-300 ease-in-out'>
+                                Contact Us! 
+                            </a>
                         </li>
                     </ul>
                 </div>
                 <div className="text-white">
-                    <button onClick={openModal}> Test </button>
+                    <button className="bg-black px-5" onClick={openModal}><GiAcousticMegaphone size={25}/></button>
                 </div>
             </header>
             <Modal isOpen={isOpen} onClose={closeModal}>
