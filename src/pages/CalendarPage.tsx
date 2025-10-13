@@ -1,14 +1,15 @@
 import CalendarComponent from "../components/CalendarComponent"
 import Layout from "../components/Layout"
+import gal4 from "../assets/gal4.jpg"
 import { SiStartdotgg, SiTwitch, SiYoutube } from "@icons-pack/react-simple-icons"
 
 export default function CalendarPage() {
     return (
         <Layout>
             <div className="min-h-[90vh]">
-                <div className="min-h-[80vh] bg-amber-700 text-3xl"> Upcoming events </div>
+                <div className='min-h-[80vh] text-3xl bg-[center_top_-10rem]' style={{ backgroundImage: `url(${gal4})`}} > Upcoming events </div>
                 {/* Links to signups */}
-                <div className="min-h-[25vh] bg-blue-400 flex flex-col sm:flex-row justify-evenly items-center gap-5">
+                <div className="min-h-[15vh] bg-red-700 flex flex-col sm:flex-row justify-evenly items-center gap-5">
                     <div 
                         className="flex flex-row p-10 hover:border-2 border-blue-100">
                         <a 
@@ -38,7 +39,7 @@ export default function CalendarPage() {
                         </a>
                     </div>
                 </div>
-                <div className="min-h-[100vh] bg-red-600">
+                <div className="min-h-[100vh]">
                     <CalendarComponent />
                 </div>
             </div>
