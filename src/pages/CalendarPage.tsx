@@ -7,7 +7,11 @@ export default function CalendarPage() {
     return (
         <Layout>
             <div className="min-h-[90vh]">
-                <div className='min-h-[80vh] text-3xl bg-[center_top_-10rem]' style={{ backgroundImage: `url(${gal4})`}} > Upcoming events </div>
+                <div className='min-h-[80vh] text-3xl bg-[center_top_-10rem]' style={{ backgroundImage: `url(${gal4})`}} >
+                    <div className="translate-y-10">
+                        <span className="text-7xl font-bold text-black">Upcoming events</span>
+                    </div>
+                </div>
                 {/* Links to signups */}
                 <div className="min-h-[15vh] bg-red-700 flex flex-col sm:flex-row justify-evenly items-center gap-5">
                     <div 
