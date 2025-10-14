@@ -4,6 +4,7 @@ import {
     Routes,
     Navigate,
 } from 'react-router-dom';
+import ScrollToTop from "../components/ScrollToTop.tsx"
 
 const HomePageView = React.lazy(() => import('./HomePageView'))
 const GalleryPage = React.lazy(() => import('./GalleryPage'))
@@ -12,6 +13,7 @@ const CalendarPage = React.lazy(() => import('./CalendarPage'))
 function AppView() {
     return (
         <Suspense fallback={<p> loading... </p>}>
+            <ScrollToTop />
             <Routes>
                 <Route path="/" element={<Navigate to="/home" replace />} />
                 <Route path="/home" element={<HomePageView />} />
