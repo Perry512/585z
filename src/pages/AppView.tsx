@@ -3,6 +3,7 @@ import {
     Route,
     Routes,
     Navigate,
+    BrowserRouter,
 } from 'react-router-dom';
 import ScrollToTop from "../components/ScrollToTop.tsx"
 
@@ -12,15 +13,17 @@ const CalendarPage = React.lazy(() => import('./CalendarPage'))
 
 function AppView() {
     return (
-        <Suspense fallback={<p> loading... </p>}>
+        <BrowserRouter basename="/585z">
+            <Suspense fallback={<p> loading... </p>}>
             <ScrollToTop />
-            <Routes>
-                <Route path="/" element={<Navigate to="/home" replace />} />
-                <Route path="/home" element={<HomePageView />} />
-                <Route path="/calendar" element={<CalendarPage />} />
-                <Route path="/gallery" element={<GalleryPage />} />
-            </Routes>
-        </Suspense>
+                <Routes>
+                    <Route path="/" element={<Navigate to="/home" replace />} />
+                    <Route path="/home" element={<HomePageView />} />
+                    <Route path="/calendar" element={<CalendarPage />} />
+                    <Route path="/gallery" element={<GalleryPage />} />
+                </Routes>
+            </Suspense>
+        </BrowserRouter>
     )
 }
 
