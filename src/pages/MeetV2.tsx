@@ -26,7 +26,7 @@ export default function MeetV2() {
           {team.map((member) => (
             <div
               key={member.id}
-              className="cursor-pointer text-center text-white bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition"
+              className="cursor-pointer text-center text-white bg-zinc-700 p-4 rounded-lg hover:bg-zinc-500 hover:text-black transition"
               onClick={() => handleOpen(member)}
             >
               <img
