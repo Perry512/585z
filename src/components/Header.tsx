@@ -30,7 +30,7 @@ function Header () {
                         </li>
                         <li className="inline-block mr-10"> 
                             <Link to="/calendar" className="text-black hover:text-blue-100 transition duration-300 ease-in-out text-lg">
-                                Test Page 
+                                Calendar 
                             </Link>
                         </li>
                         <li className="inline-block mr-10">
