@@ -26,10 +26,10 @@ function Who() {
                         <WhoAreWeSection photo={asset1} headDescription="Section 1" footDescription="This is a long piece of text so I can test how the overflow works"/>
                     </div>
                     <div ref={fadeIn2.ref} className={`${fadeIn2.className} delay-300`}>
-                        <WhoAreWeSection photo={asset2} headDescription="Section 2" footDescription="This is a long piece of text so I can test how the overflow works" linkTo="/calendar"/>
+                        <WhoAreWeSection photo={asset2} headDescription="Photo Gallery" footDescription="See the fun and games you've missed" linkTo="/gallery"/>
                     </div> 
                     <div ref={fadeIn3.ref} className={`${fadeIn3.className} delay-600`}>
-                        <WhoAreWeSection photo={asset1} headDescription="Section 3" footDescription="This is a long piece of text so I can test how the overflow works" linkTo="/calendar"/>
+                        <WhoAreWeSection photo={asset1} headDescription="Calendar" footDescription="Find out when and where to find us" linkTo="/calendar"/>
                     </div>
                 </div>
             </div>
