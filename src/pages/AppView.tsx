@@ -13,7 +13,7 @@ const CalendarPage = React.lazy(() => import('./CalendarPage'))
 function AppView() {
     return (
         <Suspense fallback={<p> loading... </p>}>
-            <ScrollToTop />
+        <ScrollToTop />
             <Routes>
                 <Route path="/" element={<Navigate to="/home" replace />} />
                 <Route path="/home" element={<HomePageView />} />
