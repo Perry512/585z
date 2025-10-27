@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react"
 import Modal from "./Modal"
-import eventsData from "../assets/events.ts"
+import eventsData from "../data/events.ts"
 import type { Event } from "../types/Event"
 import { MapContainer, TileLayer } from "react-leaflet"  
 

@@ -1,5 +1,9 @@
 import type { Person } from "../types/Person";
 import TheClobber from "../assets/TheClobber.png";
+import JoeIdaho from "../assets/profilePictures/joeidaho.jpg";
+import MadWRLD from "../assets/profilePictures/madwrld.jpg";
+import Shotglass from "../assets/profilePictures/shotglass.png";
+import GhettoSag3 from "../assets/profilePictures/ghettosag3.jpeg";
 
 export const team: Person[] = [
     {
@@ -14,43 +18,43 @@ export const team: Person[] = [
     },
     {
         id:2,
-        name: "The Clobber",
+        name: "Cullen | JoeIdaho",
         pronouns: "He/Him",
-        role: "Media Director",
+        role: "Team Liason/TO",
         location: "Rochester, NY",
-        contact: "@The Clobber",
-        bio: "test test test2",
-        imageUrl: TheClobber
+        contact: "@joeidaho.bsky.social",
+        bio: "Team Liason/TO for the 585FighterZ, independent game developer, kusoge collector extraordinaire. Ask me about scrimblo indie games.",
+        imageUrl: JoeIdaho
     },
     {
         id:3,
-        name: "The Clobber",
+        name: "Jon | MadWRLD",
         pronouns: "He/Him",
-        role: "Media Director",
+        role: "Social Media Manager/TO/Commentator",
         location: "Rochester, NY",
-        contact: "@The Clobber",
-        bio: "test test test3",
-        imageUrl: TheClobber
+        contact: "@MadWRLDfgc",
+        bio: "585Z's big stepper/yapper. MadWRLD has been part of leadership since joining up in late 2024. He serves as the Social Media Manager for the squad but wears many hats within the org (mainly to cover up his hairline).",
+        imageUrl: MadWRLD
     },
     {
         id:4,
-        name: "The Clobber",
-        pronouns: "He/Him",
-        role: "Media Director",
+        name: "Connor Petrei | Shotglass",
+        pronouns: "He/They",
+        role: "Competitor/Commentator",
         location: "Rochester, NY",
-        contact: "@The Clobber",
-        bio: "test test test3",
-        imageUrl: TheClobber
+        contact: "Twitter: @Shotglass1804  discord: shotglass",
+        bio: "Rivals of Aether 1 Forsburn Main ranked top 3 in the region for 4 consecutive seasons and #1 as of Spring 2025.  Commentator and Tournament Organizer for Smash Ultimate & Rivals of Aether 1 & 2 featured at such events as Hitfall, Full Stack & TAPS.  Indie game dev and proud member of the Pelican Post team",
+        imageUrl: Shotglass
     },
     {
         id:5,
-        name: "The Clobber",
+        name: "Julian Maxwell | GhettoSag3",
         pronouns: "He/Him",
-        role: "Media Director",
+        role: "Commentator",
         location: "Rochester, NY",
-        contact: "@The Clobber",
-        bio: "test test test3",
-        imageUrl: TheClobber
+        contact: "Twitter: Ghettosag3 Discord: justsag3",
+        bio: "Hey hello howdy how are you, I'm Julian aka Ghettosag3. Local garbage dump of fighting games. Theres almost not a single fighting game ill say no to (screw chess showdown). I’m a big fan of fighting games and mostly tag fighters. The more messed up the game the more enjoyment ill get out of the game. Ive been playing fighting games since a kid and its stuck with me till now. See me in any game ill NEVER duck any type of smoke",
+        imageUrl: GhettoSag3
     },
         {
         id:6,

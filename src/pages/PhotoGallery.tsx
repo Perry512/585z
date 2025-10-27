@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Modal from "../components/Modal"
-import { photos } from "../assets/photos";
+import { photos } from "../data/photos";
 import type { Photo } from "../types/Photo";
 
 export default function PhotoGallery() {
