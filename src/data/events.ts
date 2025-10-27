@@ -1,4 +1,5 @@
 import LetsRoc from "../assets/LETSROC.png"
+import JBR1 from "../assets/JBR2025.png"
 import type { Event } from "../types/Event"
 
 const eventsData: Event[] = [
@@ -29,7 +30,17 @@ const eventsData: Event[] = [
         gamesPlayed:["None, bitch"],
         location: "GLG Gaming Lounge",
         background: LetsRoc,
-    }
+    },
+    {
+        id: 4,
+        date: "2025-12-14",
+        dateOnFlyer: false,
+        eventName: "Jingle Bell Roc",
+        eventType: "Regional",
+        gamesPlayed: ["Rivals of Aether 1", "Rivals of Aether 2", "Street Fighter 6", "Tekken 8", "Super Smash Bros. Melee", "Super Smash Bros. Ultimate"],
+        location: "Kate Gleason Auditorium",
+        background: JBR1
+    },
 ]
 
 export default eventsData;

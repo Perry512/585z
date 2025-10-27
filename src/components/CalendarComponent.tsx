@@ -41,12 +41,12 @@ export default function CalendarComponent() {
                                     className="w-full h-100 object-cover opacity-80"
                                 />
                                 <div className="absolute top-2 right-50 text-white font-bold py-1 flex flex-row justify-center">
-                                    <p className="text-2xl text-gray-300 flex flex-row justify-center">
+                                    {event.dateOnFlyer !== false && <p className="text-2xl text-gray-300 flex flex-row justify-center">
                                         {new Date(event.date).toLocaleDateString(undefined, {
                                             month: "short",
                                             day: "numeric",
                                         })}
-                                    </p>
+                                    </p>}
                                 </div>
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-4 flex flex-col justify-end">
                                     <h3 className="text-lg font-bold">{event.eventName}</h3>
