@@ -8,6 +8,12 @@ import gal4 from "../assets/gal4.jpg"
 import gal5 from "../assets/gal5.jpg"
 import gal6 from "../assets/gal6.jpg"
 import gal7 from "../assets/gal7.jpg"
+import galA from "../assets/photoGal/galA.jpg"
+import galB from "../assets/photoGal/galB.jpg"
+import galC from "../assets/photoGal/galC.jpg"
+import galD from "../assets/photoGal/galD.jpg"
+import galE from "../assets/photoGal/galE.jpg"
+import galF from "../assets/photoGal/galF.jpg"
 
 export const photos: Photo[] = [
     {
@@ -58,6 +64,40 @@ export const photos: Photo[] = [
         alt: "Test",
         description: "Test",
     },
-
-
+    {
+        id: 9,
+        src:galA,
+        alt:"Test",
+        description:"Test"
+    },
+    {
+        id: 10,
+        src:galB,
+        alt:"Test",
+        description:"Test"
+    },
+    {
+        id: 11,
+        src:galC,
+        alt:"Test",
+        description:"Test"
+    },
+    {
+        id: 12,
+        src:galD,
+        alt:"Test",
+        description:"Test"
+    },
+    {
+        id: 13,
+        src:galE,
+        alt:"Test",
+        description:"Test"
+    },
+    {
+        id: 14,
+        src:galF,
+        alt:"Test",
+        description:"Test"
+    }
 ]
