@@ -8,6 +8,9 @@ interface PersonViewProps {
     contact?: string;
     bio: string;
     imageUrl: string;
+    offsetX?: number;
+    offsetY?: number;
+    scale?: number;
 }
 
 const DisplayPerson: React.FC<PersonViewProps>  = ({
@@ -18,6 +21,9 @@ const DisplayPerson: React.FC<PersonViewProps>  = ({
     contact,
     bio,
     imageUrl,
+    offsetX,
+    offsetY,
+    scale,
 }) => {
     return(
         <div className="flex flex-col md:flex-row bg-white rounded-2xl shadow-lg overflow-hidden max-w-4xl w-full">
@@ -27,6 +33,7 @@ const DisplayPerson: React.FC<PersonViewProps>  = ({
           src={imageUrl}
           alt={name}
           className="h-full w-full object-cover"
+          style={{ transform: `translate(${offsetX ?? 0}px, ${offsetY ?? 0}px) scale(${scale ?? 1})`}}
         />
       </div>
 

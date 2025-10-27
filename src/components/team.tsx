@@ -54,7 +54,8 @@ export const team: Person[] = [
         location: "Rochester, NY",
         contact: "Twitter: Ghettosag3 Discord: justsag3",
         bio: "Hey hello howdy how are you, I'm Julian aka Ghettosag3. Local garbage dump of fighting games. Theres almost not a single fighting game ill say no to (screw chess showdown). I’m a big fan of fighting games and mostly tag fighters. The more messed up the game the more enjoyment ill get out of the game. Ive been playing fighting games since a kid and its stuck with me till now. See me in any game ill NEVER duck any type of smoke",
-        imageUrl: GhettoSag3
+        imageUrl: GhettoSag3,
+        offsetX: 100,
     },
         {
         id:6,

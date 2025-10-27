@@ -3,4 +3,7 @@ export interface Photo {
     src: string;
     alt: string;
     description: string;
+    offsetX?: number;
+    offsetY?: number;
+    scale?: number;
 }

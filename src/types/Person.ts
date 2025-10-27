@@ -7,4 +7,7 @@ export interface Person {
     contact?: string;
     bio: string;
     imageUrl: string;
+    offsetX?: number;
+    offsetY?: number;
+    scale?: number;
 }
