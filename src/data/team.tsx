@@ -113,7 +113,12 @@ export const team: Person[] = [
         location: "Rochester, NY",
         contact: "Discord: .megameme",
         bio: "Graduated from SUNY Brockport, Aidan enjoys spending his free time climbing, playing Tekken, Street Fighter and watching NorthernLion shorts on Youtube",
-        imageUrl: TheClobster
+        imageUrl: TheClobster,
+        gamesPlayed: [
+            games.find(g => g.Title === "Street Fighter 6" )!,
+            games.find(g => g.Title === "Tekken 8")!,
+            games.find(g => g.Title === "2XKO")!,
+        ]
     },
         {
         id:8,
