@@ -2,7 +2,7 @@ import { useState } from "react"
 import Modal from "../components/Modal"
 import { useModal } from "../hooks/useModal"
 import DisplayPerson from "../views/DisplayPerson"
-import { team } from "../components/team"
+import { team } from "../data/team"
 
 import type { Person } from "../types/Person"
 

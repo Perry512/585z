@@ -4,6 +4,7 @@ import JoeIdaho from "../assets/profilePictures/joeidaho.jpg";
 import MadWRLD from "../assets/profilePictures/madwrld.jpg";
 import Shotglass from "../assets/profilePictures/shotglass.png";
 import GhettoSag3 from "../assets/profilePictures/ghettosag3.jpeg";
+import Skar from "../assets/profilePictures/skar.jpg";
 
 export const team: Person[] = [
     {
@@ -55,17 +56,16 @@ export const team: Person[] = [
         contact: "Twitter: Ghettosag3 Discord: justsag3",
         bio: "Hey hello howdy how are you, I'm Julian aka Ghettosag3. Local garbage dump of fighting games. Theres almost not a single fighting game ill say no to (screw chess showdown). I’m a big fan of fighting games and mostly tag fighters. The more messed up the game the more enjoyment ill get out of the game. Ive been playing fighting games since a kid and its stuck with me till now. See me in any game ill NEVER duck any type of smoke",
         imageUrl: GhettoSag3,
-        offsetX: 100,
     },
         {
         id:6,
-        name: "The Clobber",
+        name: "Oskar Weiss",
         pronouns: "He/Him",
-        role: "Media Director",
-        location: "Rochester, NY",
-        contact: "@The Clobber",
-        bio: "test test test3",
-        imageUrl: TheClobber
+        role: "Competitor",
+        location: "Hudson Valley, NY",
+        contact: "Twitter: @SkarFGC Twitch: SkarFGC Discord: sk4r_",
+        bio: "Shoto enthusiast, crosscut inputter, looper of throws. First loves were TF2 and CS, switched to FGs because my teammates were holding me back.",
+        imageUrl: Skar
     },
         {
         id:7,
