@@ -41,7 +41,7 @@ export default function MeetV2() {
         </div>
         {/* Modal */}
         <Modal isOpen={isOpen} onClose={closeModal}>
-            {activePerson && <DisplayPerson {...activePerson} />}
+            {activePerson && <DisplayPerson {...activePerson} onClose={closeModal}/>}
         </Modal>
     </div>
   )

@@ -1,3 +1,5 @@
+import type { Game } from "./Games";
+
 export interface Person {
     id: number;
     name: string;
@@ -6,8 +8,10 @@ export interface Person {
     location: string;
     contact?: string;
     bio: string;
+    tag?: string;
+    gamesPlayed?: Game[];
     imageUrl: string;
-    offsetX?: number;
-    offsetY?: number;
+    panX?: number;
+    panY?: number;
     scale?: number;
 }

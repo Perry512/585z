@@ -1,4 +1,5 @@
 import type { Person } from "../types/Person";
+import games from "./games";
 import TheClobber from "../assets/TheClobber.png";
 import JoeIdaho from "../assets/profilePictures/joeidaho.jpg";
 import MadWRLD from "../assets/profilePictures/madwrld.jpg";
@@ -15,57 +16,93 @@ export const team: Person[] = [
         location: "Rochester, NY",
         contact: "@The Clobber",
         bio: "test test test1",
-        imageUrl: TheClobber
+        imageUrl: TheClobber,
+        gamesPlayed: [
+            games.find(g => g.Title === "Street Fighter 6")!,
+        ]
     },
     {
         id:2,
-        name: "Cullen | JoeIdaho",
+        name: "Cullen",
+        tag: "Joe Idaho",
         pronouns: "He/Him",
         role: "Team Liason/TO",
         location: "Rochester, NY",
         contact: "@joeidaho.bsky.social",
         bio: "Team Liason/TO for the 585FighterZ, independent game developer, kusoge collector extraordinaire. Ask me about scrimblo indie games.",
-        imageUrl: JoeIdaho
+        imageUrl: JoeIdaho,
+        gamesPlayed: [
+            games.find(g => g.Title === "Guilty Gear: Strive")!,
+            games.find(g => g.Title === "Undernight In-Birth II Sys:Celeste")!,
+            games.find(g => g.Title === "Granblue Fantasy: Versus Rising")!,
+        ],
+        panX: 80,
     },
     {
         id:3,
-        name: "Jon | MadWRLD",
+        name: "Jon",
+        tag: "MadWRLD",
         pronouns: "He/Him",
         role: "Social Media Manager/TO/Commentator",
         location: "Rochester, NY",
         contact: "@MadWRLDfgc",
         bio: "585Z's big stepper/yapper. MadWRLD has been part of leadership since joining up in late 2024. He serves as the Social Media Manager for the squad but wears many hats within the org (mainly to cover up his hairline).",
-        imageUrl: MadWRLD
+        imageUrl: MadWRLD,
+        gamesPlayed: [
+            games.find(g => g.Title === "Street Fighter 6")!,
+            games.find(g => g.Title === "2XKO")!,
+        ],
     },
     {
         id:4,
-        name: "Connor Petrei | Shotglass",
+        name: "Connor Petrei",
+        tag: "Shotglass",
         pronouns: "He/They",
         role: "Competitor/Commentator",
         location: "Rochester, NY",
         contact: "Twitter: @Shotglass1804  discord: shotglass",
         bio: "Rivals of Aether 1 Forsburn Main ranked top 3 in the region for 4 consecutive seasons and #1 as of Spring 2025.  Commentator and Tournament Organizer for Smash Ultimate & Rivals of Aether 1 & 2 featured at such events as Hitfall, Full Stack & TAPS.  Indie game dev and proud member of the Pelican Post team",
-        imageUrl: Shotglass
+        imageUrl: Shotglass,
+        gamesPlayed: [
+            games.find(g => g.Title === "Rivals of Aether 2")!,
+        ]
     },
     {
         id:5,
-        name: "Julian Maxwell | GhettoSag3",
+        name: "Julian Maxwell",
         pronouns: "He/Him",
         role: "Commentator",
         location: "Rochester, NY",
         contact: "Twitter: Ghettosag3 Discord: justsag3",
         bio: "Hey hello howdy how are you, I'm Julian aka Ghettosag3. Local garbage dump of fighting games. Theres almost not a single fighting game ill say no to (screw chess showdown). I’m a big fan of fighting games and mostly tag fighters. The more messed up the game the more enjoyment ill get out of the game. Ive been playing fighting games since a kid and its stuck with me till now. See me in any game ill NEVER duck any type of smoke",
         imageUrl: GhettoSag3,
+        gamesPlayed: [
+            games.find(g => g.Title === "Super Smash Bros. Ultimate")!,
+            games.find(g => g.Title === "Rivals of Aether 2")!,
+            games.find(g => g.Title === "Tekken 8")!,
+            games.find(g => g.Title === "2XKO")!,
+            games.find(g => g.Title === "Undernight In-Birth II Sys:Celeste")!,
+            games.find(g => g.Title === "Ultimate Marvel Vs Capcom 3")!,
+            games.find(g => g.Title === "Nen Impact")!,
+        ],
+        tag: "GhettoSag3",
+        panX: 30,
     },
         {
         id:6,
         name: "Oskar Weiss",
+        tag: "Skar",
         pronouns: "He/Him",
         role: "Competitor",
         location: "Hudson Valley, NY",
         contact: "Twitter: @SkarFGC Twitch: SkarFGC Discord: sk4r_",
         bio: "Shoto enthusiast, crosscut inputter, looper of throws. First loves were TF2 and CS, switched to FGs because my teammates were holding me back.",
-        imageUrl: Skar
+        imageUrl: Skar,
+        gamesPlayed: [
+            games.find(g => g.Title === "Street Fighter 6")!,
+            games.find(g => g.Title === "Guilty Gear: Strive")!,
+        ],
+        panX: 45,
     },
         {
         id:7,
