@@ -38,7 +38,11 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
                 <div
                     id="targetElementId"
                     ref={targetRef}
-                    className="rounded-2xl shadow-lg max-w-md overflow-y-auto max-h-full"
+                    className="
+                                rounded-2xl shadow-lg overflow-y-auto max-h-[90vh]
+                                w-[60%] md:w-[60%] lg:w-[50%] xl:w-[50%]
+                                bg-white
+                            "
                     onClick={(e) => e.stopPropagation()}
                 >
                 {children}

@@ -6,6 +6,7 @@ import MadWRLD from "../assets/profilePictures/madwrld.jpg";
 import Shotglass from "../assets/profilePictures/shotglass.png";
 import GhettoSag3 from "../assets/profilePictures/ghettosag3.jpeg";
 import Skar from "../assets/profilePictures/skar.jpg";
+import TheClobster from "../assets/profilePictures/clobster.jpg"
 
 export const team: Person[] = [
     {
@@ -106,13 +107,13 @@ export const team: Person[] = [
     },
         {
         id:7,
-        name: "The Clobber",
+        name: "Aidan Seaburg",
         pronouns: "He/Him",
-        role: "Media Director",
+        role: "Illustrator",
         location: "Rochester, NY",
-        contact: "@The Clobber",
-        bio: "test test test3",
-        imageUrl: TheClobber
+        contact: "Discord: .megameme",
+        bio: "Graduated from SUNY Brockport, Aidan enjoys spending his free time climbing, playing Tekken, Street Fighter and watching NorthernLion shorts on Youtube",
+        imageUrl: TheClobster
     },
         {
         id:8,
