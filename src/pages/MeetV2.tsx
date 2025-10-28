@@ -34,7 +34,7 @@ export default function MeetV2() {
                 alt={member.name}
                 className="w-24 h-24 mx-auto rounded-full mb-3 object-cover border-2 border-gray-500"
               />
-              <h3 className="font-bold">{member.name}</h3>
+              <h3 className="font-bold">{member.name} | {member.tag}</h3>
               <p className="text-sm text-gray-300">{member.role}</p>
             </div>
           ))}
