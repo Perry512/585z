@@ -1,4 +1,5 @@
 import type { Person } from "../types/Person";
+import { SocialPlatform } from "../types/Social";
 import games from "./games";
 import TheClobber from "../assets/TheClobber.png";
 import JoeIdaho from "../assets/profilePictures/joeidaho.jpg";
@@ -15,7 +16,9 @@ export const team: Person[] = [
         pronouns: "He/Him",
         role: "Media Director",
         location: "Rochester, NY",
-        contact: "@The Clobber",
+        contact: {
+            [SocialPlatform.Discord]: ".megameme"
+        },
         bio: "test test test1",
         imageUrl: TheClobber,
         gamesPlayed: [
@@ -29,7 +32,9 @@ export const team: Person[] = [
         pronouns: "He/Him",
         role: "Team Liason/TO",
         location: "Rochester, NY",
-        contact: "@joeidaho.bsky.social",
+        contact: {
+            [SocialPlatform.Bluesky]: "@joeidaho.bsky.social"
+        },
         bio: "Team Liason/TO for the 585FighterZ, independent game developer, kusoge collector extraordinaire. Ask me about scrimblo indie games.",
         imageUrl: JoeIdaho,
         gamesPlayed: [
@@ -46,7 +51,10 @@ export const team: Person[] = [
         pronouns: "He/Him",
         role: "Social Media Manager/TO/Commentator",
         location: "Rochester, NY",
-        contact: "@MadWRLDfgc",
+        contact: {
+            [SocialPlatform.X]: "@MadWRLDfgc",
+            [SocialPlatform.Discord]: "MadWRLDfgc",
+        },
         bio: "585Z's big stepper/yapper. MadWRLD has been part of leadership since joining up in late 2024. He serves as the Social Media Manager for the squad but wears many hats within the org (mainly to cover up his hairline).",
         imageUrl: MadWRLD,
         gamesPlayed: [
@@ -61,7 +69,10 @@ export const team: Person[] = [
         pronouns: "He/They",
         role: "Competitor/Commentator",
         location: "Rochester, NY",
-        contact: "Twitter: @Shotglass1804  discord: shotglass",
+        contact: {
+            [SocialPlatform.X]: "@Shotglass1804",
+            [SocialPlatform.Discord]: "shotglass",
+        },
         bio: "Rivals of Aether 1 Forsburn Main ranked top 3 in the region for 4 consecutive seasons and #1 as of Spring 2025.  Commentator and Tournament Organizer for Smash Ultimate & Rivals of Aether 1 & 2 featured at such events as Hitfall, Full Stack & TAPS.  Indie game dev and proud member of the Pelican Post team",
         imageUrl: Shotglass,
         gamesPlayed: [
@@ -74,7 +85,10 @@ export const team: Person[] = [
         pronouns: "He/Him",
         role: "Commentator",
         location: "Rochester, NY",
-        contact: "Twitter: Ghettosag3 Discord: justsag3",
+        contact: {
+            [SocialPlatform.X]: "@Ghettosag3",
+            [SocialPlatform.Discord]: "justsag3",
+        },
         bio: "Hey hello howdy how are you, I'm Julian aka Ghettosag3. Local garbage dump of fighting games. Theres almost not a single fighting game ill say no to (screw chess showdown). I’m a big fan of fighting games and mostly tag fighters. The more messed up the game the more enjoyment ill get out of the game. Ive been playing fighting games since a kid and its stuck with me till now. See me in any game ill NEVER duck any type of smoke",
         imageUrl: GhettoSag3,
         gamesPlayed: [
@@ -96,7 +110,11 @@ export const team: Person[] = [
         pronouns: "He/Him",
         role: "Competitor",
         location: "Hudson Valley, NY",
-        contact: "Twitter: @SkarFGC Twitch: SkarFGC Discord: sk4r_",
+        contact: {
+            [SocialPlatform.X]: "@SkarFGC",
+            [SocialPlatform.Discord]: "sk4r_",
+            [SocialPlatform.Twitch]: "SkarFGC",
+        },
         bio: "Shoto enthusiast, crosscut inputter, looper of throws. First loves were TF2 and CS, switched to FGs because my teammates were holding me back.",
         imageUrl: Skar,
         gamesPlayed: [
@@ -111,7 +129,9 @@ export const team: Person[] = [
         pronouns: "He/Him",
         role: "Illustrator",
         location: "Rochester, NY",
-        contact: "Discord: .megameme",
+        contact: {
+            [SocialPlatform.Discord]: ".megameme"
+        },
         bio: "Graduated from SUNY Brockport, Aidan enjoys spending his free time climbing, playing Tekken, Street Fighter and watching NorthernLion shorts on Youtube",
         imageUrl: TheClobster,
         gamesPlayed: [
@@ -126,7 +146,9 @@ export const team: Person[] = [
         pronouns: "He/Him",
         role: "Media Director",
         location: "Rochester, NY",
-        contact: "@The Clobber",
+        contact: {
+            [SocialPlatform.Discord]: ".megameme"
+        },
         bio: "test test test3",
         imageUrl: TheClobber
     },
@@ -136,7 +158,9 @@ export const team: Person[] = [
         pronouns: "He/Him",
         role: "Media Director",
         location: "Rochester, NY",
-        contact: "@The Clobber",
+        contact: {
+            [SocialPlatform.Discord]: ".megameme"
+        },
         bio: "test test test3",
         imageUrl: TheClobber
     },
@@ -146,7 +170,9 @@ export const team: Person[] = [
         pronouns: "He/Him",
         role: "Media Director",
         location: "Rochester, NY",
-        contact: "@The Clobber",
+        contact: {
+            [SocialPlatform.Discord]: ".megameme"
+        },
         bio: "test test test3",
         imageUrl: TheClobber
     },
@@ -156,7 +182,9 @@ export const team: Person[] = [
         pronouns: "He/Him",
         role: "Media Director",
         location: "Rochester, NY",
-        contact: "@The Clobber",
+        contact: {
+            [SocialPlatform.Discord]: ".megameme"
+        },
         bio: "test test test3",
         imageUrl: TheClobber
     },
@@ -166,7 +194,9 @@ export const team: Person[] = [
         pronouns: "He/Him",
         role: "Media Director",
         location: "Rochester, NY",
-        contact: "@The Clobber",
+        contact: {
+            [SocialPlatform.Discord]: ".megameme"
+        },
         bio: "test test test3",
         imageUrl: TheClobber
     },
@@ -176,7 +206,9 @@ export const team: Person[] = [
         pronouns: "He/Him",
         role: "Media Director",
         location: "Rochester, NY",
-        contact: "@The Clobber",
+        contact: {
+            [SocialPlatform.Discord]: ".megameme"
+        },
         bio: "test test test3",
         imageUrl: TheClobber
     },
@@ -186,7 +218,9 @@ export const team: Person[] = [
         pronouns: "He/Him",
         role: "Media Director",
         location: "Rochester, NY",
-        contact: "@The Clobber",
+        contact: {
+            [SocialPlatform.Discord]: ".megameme"
+        },
         bio: "test test test3",
         imageUrl: TheClobber
     },
@@ -196,7 +230,9 @@ export const team: Person[] = [
         pronouns: "He/Him",
         role: "Media Director",
         location: "Rochester, NY",
-        contact: "@The Clobber",
+        contact: {
+            [SocialPlatform.Discord]: ".megameme"
+        },
         bio: "test test test3",
         imageUrl: TheClobber
     },
@@ -206,7 +242,9 @@ export const team: Person[] = [
         pronouns: "He/Him",
         role: "Media Director",
         location: "Rochester, NY",
-        contact: "@The Clobber",
+        contact: {
+            [SocialPlatform.Discord]: ".megameme"
+        },
         bio: "test test test3",
         imageUrl: TheClobber
     },

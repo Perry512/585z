@@ -5,12 +5,12 @@ import {
     SiX,
     SiTwitch,
 } from "react-icons/si";
-import { Social } from "../types/Social";
+import { SocialPlatform } from "../types/Social";
 
-export const socialIconMap = {
-    [Social.Discord]: SiDiscord,
-    [Social.Bluesky]: SiBluesky,
-    [Social.X]: SiX,
-    [Social.Twitch]: SiTwitch,
-    [Social.YouTube]: SiYoutube,
+export const socialIconMap: Record<SocialPlatform, React.ElementType> = {
+    [SocialPlatform.Discord]: SiDiscord,
+    [SocialPlatform.Bluesky]: SiBluesky,
+    [SocialPlatform.X]: SiX,
+    [SocialPlatform.Twitch]: SiTwitch,
+    [SocialPlatform.YouTube]: SiYoutube,
 }

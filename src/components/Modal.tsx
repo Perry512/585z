@@ -19,6 +19,7 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
 
         if (isOpen) {
             disableBodyScroll(element);
+            window.dispatchEvent(new Event("resize"));
         } else {
             enableBodyScroll(element);
         }

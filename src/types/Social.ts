@@ -1,4 +1,4 @@
-export enum Social {
+export const enum SocialPlatform {
     Discord = "Discord",
     Bluesky = "Bluesky",
     YouTube = "YouTube",
@@ -6,4 +6,4 @@ export enum Social {
     X = "X",
 }
 
-export type Social = Partial<Record<Social, string>>;
+export type SocialLinks = Partial<Record<SocialPlatform, string>>;

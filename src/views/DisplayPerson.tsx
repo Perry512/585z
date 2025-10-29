@@ -1,12 +1,17 @@
 import React from "react"
 import { IoMdClose } from "react-icons/io";
+import type { Person } from "../types/Person";
+import type { SocialLinks } from "../types/Social";
+import { SocialPlatform } from "../types/Social"
+import SocialLinksDisplay from "../components/SocialLinkDisplay"
 
-interface PersonViewProps {
+
+interface PersonViewProps extends Person {
     name: string;
     pronouns?: string;
     role: string;
     location?: string;
-    contact?: string;
+    contact?: SocialLinks | Record<SocialPlatform, string>;
     bio: string;
     tag?: string;
     imageUrl: string;
@@ -61,13 +66,7 @@ const DisplayPerson: React.FC<PersonViewProps>  = ({
           </h2>
           <p className="text-sm text-gray-700 mt-1">{role}</p>
           <p className="text-sm text-gray-600 mt-1">{location}</p>
-          <a
-            href={`mailto:${contact}`}
-            className="text-sm text-blue-600 hover:underline mt-2 inline-block"
-          >
-            {contact}
-          </a>
-
+          {contact && <SocialLinksDisplay contacts={contact} />}
           <p className="text-sm text-gray-800 mt-4 leading-relaxed">{bio}</p>
         </div>
       </div>

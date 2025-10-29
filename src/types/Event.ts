@@ -1,3 +1,5 @@
+import type { Game } from "./Games";
+
 export interface Event {
     id: number;
     date: string;
@@ -6,7 +8,7 @@ export interface Event {
     eventType: string;
     background: string;
     location: string;
-    gamesPlayed: string[];
+    gamesPlayed: Game[];
     eventDescription?: string;
     flier?: string;
 }
