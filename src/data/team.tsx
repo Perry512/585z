@@ -8,6 +8,7 @@ import Shotglass from "../assets/profilePictures/shotglass.png";
 import GhettoSag3 from "../assets/profilePictures/ghettosag3.jpeg";
 import Skar from "../assets/profilePictures/skar.jpg";
 import TheClobster from "../assets/profilePictures/clobster.jpg"
+import Gibbs from "../assets/profilePictures/gibbs.PNG";
 
 export const team: Person[] = [
     {
@@ -126,6 +127,7 @@ export const team: Person[] = [
         {
         id:7,
         name: "Aidan Seaburg",
+        tag: "The Clobber",
         pronouns: "He/Him",
         role: "Illustrator",
         location: "Rochester, NY",
@@ -142,27 +144,37 @@ export const team: Person[] = [
     },
         {
         id:8,
-        name: "The Clobber",
+        name: "Jason Gibbs",
+        tag: "Gibbs",
         pronouns: "He/Him",
-        role: "Media Director",
+        role: "Competitor/Coach",
         location: "Rochester, NY",
         contact: {
-            [SocialPlatform.Discord]: ".megameme"
+            [SocialPlatform.X]: "@Gibbs",
+            [SocialPlatform.Email]: "jasongibbs2001@gmail.com" 
         },
-        bio: "test test test3",
-        imageUrl: TheClobber
+        bio: "Tekken 8 player, \tSteve Fox Specialist ",
+        imageUrl: Gibbs,
+        gamesPlayed: [
+            games.find(g => g.Title === "Tekken 8")!,
+        ]
     },
         {
         id:9,
-        name: "The Clobber",
+        name: "Ethan",
+        tag: "Tyger",
         pronouns: "He/Him",
-        role: "Media Director",
+        role: "Competitor",
         location: "Rochester, NY",
         contact: {
-            [SocialPlatform.Discord]: ".megameme"
+            [SocialPlatform.YouTube]: "Tygerkid",
+            [SocialPlatform.TikTok]: "Tygerkid"
         },
-        bio: "test test test3",
-        imageUrl: TheClobber
+        bio: "\"A content creator, king and wrestling enthusiast. I love batman\"",
+        imageUrl: TheClobber,
+        gamesPlayed: [
+            games.find(g => g.Title === "Tekken 8")!,
+        ]
     },
         {
         id:10,

@@ -4,6 +4,8 @@ import {
     SiYoutube,
     SiX,
     SiTwitch,
+    SiGmail,
+    SiTiktok,
 } from "react-icons/si";
 import { SocialPlatform } from "../types/Social";
 
@@ -13,4 +15,6 @@ export const socialIconMap: Record<SocialPlatform, React.ElementType> = {
     [SocialPlatform.X]: SiX,
     [SocialPlatform.Twitch]: SiTwitch,
     [SocialPlatform.YouTube]: SiYoutube,
-}
+    [SocialPlatform.Email]: SiGmail,
+    [SocialPlatform.TikTok]: SiTiktok                                                                                                                                                                                                                                                                           
+}                      
