@@ -8,7 +8,8 @@ import Shotglass from "../assets/profilePictures/shotglass.png";
 import GhettoSag3 from "../assets/profilePictures/ghettosag3.jpeg";
 import Skar from "../assets/profilePictures/skar.jpg";
 import TheClobster from "../assets/profilePictures/clobster.jpg"
-import Gibbs from "../assets/profilePictures/gibbs.PNG";
+import Gibbs from "../assets/profilePictures/gibbs.png";
+import Tyger from "../assets/profilePictures/tyger.jpg"
 
 export const team: Person[] = [
     {
@@ -171,7 +172,7 @@ export const team: Person[] = [
             [SocialPlatform.TikTok]: "Tygerkid"
         },
         bio: "\"A content creator, king and wrestling enthusiast. I love batman\"",
-        imageUrl: TheClobber,
+        imageUrl: Tyger,
         gamesPlayed: [
             games.find(g => g.Title === "Tekken 8")!,
         ]

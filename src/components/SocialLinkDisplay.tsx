@@ -17,8 +17,10 @@ const SocialLinksDisplay: React.FC<SocialLinkDisplayProps> = ({ contacts }) => {
                     [SocialPlatform.Discord]: `https://discord.com/users/${username}`,
                     [SocialPlatform.Bluesky]: `https://bsky.app/${username}`,
                     [SocialPlatform.Twitch]: `https://twitch.tv/${username}`,
-                    [SocialPlatform.YouTube]: `https://youtube.com/${username}`,
+                    [SocialPlatform.YouTube]: `https://youtube.com/@${username}`,
                     [SocialPlatform.X]: `https://x.com/${username}`,
+                    [SocialPlatform.TikTok]: `https://tiktok.com/@${username}`,
+                    [SocialPlatform.Email]: `mailto:${username}`
                 };
 
                 const href = linkMap[platform as SocialPlatform] || "#";
@@ -32,7 +34,7 @@ const SocialLinksDisplay: React.FC<SocialLinkDisplayProps> = ({ contacts }) => {
                         className="text-gray-600 hover:text-red-600 transition flex flex-row"
                         title={platform}
                     >
-                        <Icon className="w-5 h-5" />&nbsp; |&nbsp; <div>{username}</div>
+                        <Icon className="w-5 h-5 translate-y-0.5" />&nbsp; |&nbsp; <div>{username}</div>
                     </a>
                 );
             })}

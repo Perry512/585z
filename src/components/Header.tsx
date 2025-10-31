@@ -60,7 +60,7 @@ function Header () {
                     pronouns="He/Him"
                     role="Media Producer"
                     location="Rochester, NY"
-                    contact="@The Clobber"
+                    //contact="@The Clobber"
                     bio="Graduated from SUNY Brockport, Aidan enjoys spending his free time climbing, playing Tekken, Street Fighter and watching NorthernLion shorts on Youtube"  
                     imageUrl={TheClobber}  
                 />
