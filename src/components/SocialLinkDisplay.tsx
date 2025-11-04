@@ -20,7 +20,8 @@ const SocialLinksDisplay: React.FC<SocialLinkDisplayProps> = ({ contacts }) => {
                     [SocialPlatform.YouTube]: `https://youtube.com/@${username}`,
                     [SocialPlatform.X]: `https://x.com/${username}`,
                     [SocialPlatform.TikTok]: `https://tiktok.com/@${username}`,
-                    [SocialPlatform.Email]: `mailto:${username}`
+                    [SocialPlatform.Email]: `mailto:${username}`,
+                    [SocialPlatform.Instagram]: `https://instagram.com/${username}`
                 };
 
                 const href = linkMap[platform as SocialPlatform] || "#";
