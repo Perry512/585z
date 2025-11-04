@@ -179,14 +179,21 @@ export const team: Person[] = [
     },
         {
         id:10,
-        name: "The Clobber",
-        pronouns: "He/Him",
-        role: "Media Director",
+        name: "Gabriella \"Gabby\" Sarango",
+        pronouns: "She/They",
+        tag: "ValkyrieVivy",
+        role: "Universal Project Coordinator",
         location: "Rochester, NY",
         contact: {
-            [SocialPlatform.Discord]: ".megameme"
+            [SocialPlatform.X]: "ValkyrieVivy",
+            [SocialPlatform.TikTok]: "585zvalkyrievivy",
+            [SocialPlatform.Instagram]: "ValkyrieVivy"
         },
-        bio: "test test test3",
+        gamesPlayed: [
+            games.find(g => g.Title === "Street Fighter 6")!,
+            games.find(g => g.Title === "Tekken 8")!,
+        ],
+        bio: "\"Im terrible with bio's, but I'm way better with people! I'm a certified yapper, but no one has complained (much) so far! If you see me, ask me about FighterZ Fatale! Don't ask about Epic the Musical, you will get stuck in a non-skippable 2 1/2 hour cutscene.\"",
         imageUrl: TheClobber
     },
         {
