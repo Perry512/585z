@@ -1,9 +1,10 @@
 import { SiStartdotgg, SiTwitch, SiYoutube } from "@icons-pack/react-simple-icons"
+import hexes from "../assets/Hex_Example.png";
 
 export default function LargeSocialLinkBanner() {
     return (
         <>
-            <div className="min-h-[15vh] bg-red-700 flex flex-col sm:flex-row justify-evenly items-center gap-5">
+            <div className="min-h-[15vh] bg-red-700 flex flex-col sm:flex-row justify-evenly items-center gap-5 "style={{ backgroundImage: `url(${hexes})`}}>
                 <div 
                     className="flex flex-row p-10 hover:border-2 border-blue-100">
                     <a 
