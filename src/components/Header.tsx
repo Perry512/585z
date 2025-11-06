@@ -13,16 +13,13 @@ function Header () {
         <>
             <header className="bg-red-800 flex flex-wrap justify-between items-center w-full p-5">    
                 <div className='flex flex-row justify-center mx-10'>
-                    <a className="flex items-center" href="#home">
-                        <img src={logo2} className="mr-3 h-6 sm:h-9" alt="585z Logo" />
-                        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white" id='home'>585FighterZ</span>
-                    </a>
+                    <div>
+                        <Link to="/home" className="text-black hover:text-blue-100 transition duration-300 ease-in-out text-lg flex flex-row">
+                            <img src={logo2} className="mr-3 h-6 sm:h-9" alt="585Z Logo" />
+                                <div className="text-2xl"> 585FighterZ</div>
+                        </Link>
+                    </div>
                     <ul className='ml-10 translate-y-px'>
-                        <li className="inline-block mr-10"> 
-                            <Link to="/home" className="text-black hover:text-blue-100 transition duration-300 ease-in-out text-lg">
-                                Home Page 
-                            </Link>
-                        </li>
                         <li className="inline-block mr-10"> 
                             <Link to="/gallery" className="text-black hover:text-blue-100 transition duration-300 ease-in-out text-lg">
                                 Gallery
