@@ -8,7 +8,8 @@ import Shotglass from "../assets/profilePictures/shotglass.png";
 import GhettoSag3 from "../assets/profilePictures/ghettosag3.jpeg";
 import Skar from "../assets/profilePictures/skar.jpg";
 import TheClobster from "../assets/profilePictures/clobster.jpg"
-import Gibbs from "../assets/profilePictures/gibbs.PNG";
+import Gibbs from "../assets/profilePictures/gibbs.png";
+import Tyger from "../assets/profilePictures/tyger.jpg"
 
 export const team: Person[] = [
     {
@@ -171,21 +172,28 @@ export const team: Person[] = [
             [SocialPlatform.TikTok]: "Tygerkid"
         },
         bio: "\"A content creator, king and wrestling enthusiast. I love batman\"",
-        imageUrl: TheClobber,
+        imageUrl: Tyger,
         gamesPlayed: [
             games.find(g => g.Title === "Tekken 8")!,
         ]
     },
         {
         id:10,
-        name: "The Clobber",
-        pronouns: "He/Him",
-        role: "Media Director",
+        name: "Gabriella \"Gabby\" Sarango",
+        pronouns: "She/They",
+        tag: "ValkyrieVivy",
+        role: "Universal Project Coordinator",
         location: "Rochester, NY",
         contact: {
-            [SocialPlatform.Discord]: ".megameme"
+            [SocialPlatform.X]: "ValkyrieVivy",
+            [SocialPlatform.TikTok]: "585zvalkyrievivy",
+            [SocialPlatform.Instagram]: "ValkyrieVivy"
         },
-        bio: "test test test3",
+        gamesPlayed: [
+            games.find(g => g.Title === "Street Fighter 6")!,
+            games.find(g => g.Title === "Tekken 8")!,
+        ],
+        bio: "\"Im terrible with bio's, but I'm way better with people! I'm a certified yapper, but no one has complained (much) so far! If you see me, ask me about FighterZ Fatale! Don't ask about Epic the Musical, you will get stuck in a non-skippable 2 1/2 hour cutscene.\"",
         imageUrl: TheClobber
     },
         {

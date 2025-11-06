@@ -71,4 +71,5 @@ const games: Game[] = [
     }
 ]
 
+export const gamesMap = Object.fromEntries(games.map((g) => [g.Title, g]));
 export default games;

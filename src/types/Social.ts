@@ -6,6 +6,7 @@ export const enum SocialPlatform {
     X = "X",
     Email = "Email",
     TikTok = "TikTok",
+    Instagram = "Instagram",
 }
 
 export type SocialLinks = Partial<Record<SocialPlatform, string>>;

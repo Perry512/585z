@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
 import { useModal } from '../hooks/useModal';
-import Modal from './Modal';
-import TheClobber from '../assets/TheClobber.png';
 import logo2 from '../assets/Finished 585Z fr.svg'
-import DisplayPerson from '../views/DisplayPerson';
 import { GiAcousticMegaphone } from 'react-icons/gi';
+import EventModal from './EventModal';
+import { GetClosestEvent } from '../hooks/GetClosestEvent';
+import eventsData from '../data/events';
 
 function Header () {
     const { isOpen, openModal, closeModal } = useModal();
+    const closestEvent = GetClosestEvent(eventsData)
+    const featuredEvent = eventsData.find((e) => e.isFeatured) || closestEvent ? closestEvent : null;
 
     return ( 
         <>
@@ -51,17 +53,7 @@ function Header () {
                     <button className="bg-black px-5" onClick={openModal}><GiAcousticMegaphone size={25}/></button>
                 </div>
             </header>
-            <Modal isOpen={isOpen} onClose={closeModal}>
-                <DisplayPerson 
-                    name="Aidan Seaburg"
-                    pronouns="He/Him"
-                    role="Media Producer"
-                    location="Rochester, NY"
-                    contact="@The Clobber"
-                    bio="Graduated from SUNY Brockport, Aidan enjoys spending his free time climbing, playing Tekken, Street Fighter and watching NorthernLion shorts on Youtube"  
-                    imageUrl={TheClobber}  
-                />
-            </Modal>
+            {isOpen && <EventModal activeEvent={featuredEvent} onClose={closeModal} /> }
         </>
     )
 }

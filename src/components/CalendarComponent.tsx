@@ -1,9 +1,12 @@
 import { useState, useMemo } from "react"
-import Modal from "./Modal"
 import eventsData from "../data/events.ts"
+import EventModal from "./EventModal.tsx"
+
 import type { Event } from "../types/Event"
-import { MapContainer, TileLayer } from "react-leaflet" 
-import ResizeMapOnModalOpen from "../hooks/ResizeMapOnModalOpen.tsx"; 
+
+
+// import { MapContainer, TileLayer } from "react-leaflet" 
+// import ResizeMapOnModalOpen from "../hooks/ResizeMapOnModalOpen.tsx"; 
 
 export default function CalendarComponent() {
     const [activeEvent, setActiveEvent] = useState<Event | null>(null);
@@ -39,7 +42,7 @@ export default function CalendarComponent() {
                                 <img
                                     src={event.background}
                                     alt={event.eventName}
-                                    className="w-full h-100 object-cover opacity-80"
+                                    className="w-full h-75 object-cover opacity-80"
                                 />
                                 <div className="absolute top-2 right-50 text-white font-bold py-1 flex flex-row justify-center">
                                     {event.dateOnFlyer !== false && <p className="text-2xl text-gray-300 flex flex-row justify-center">
@@ -61,44 +64,7 @@ export default function CalendarComponent() {
                     </div>
                 </div>
             ))}         
-
-            <Modal isOpen={!!activeEvent} onClose={() => setActiveEvent(null)}>
-                {activeEvent && (
-                    <div className="flex flex-col items-center rounded-md">
-                        <img
-                            src={activeEvent.background}
-                            alt={activeEvent.eventName}
-                            className="max-h-[80vh] object-contain rounded-md"
-                        />
-                        <h2 className="text-2xl font-bold mt-4">
-                            {activeEvent.eventName}
-                        </h2>
-                        <p className="text-gray-300">{activeEvent.eventType}</p>
-                        <p className="text-gray-400 mt-2">
-                            Games: {activeEvent.gamesPlayed.join(", ")}
-                        </p>
-                        <p className="text-gray-500 mt-1">{activeEvent.location}</p>
-                        <p className="text-black mt-5">{activeEvent.eventDescription}</p>  
-                        <div className="pt-2 mt-2 w-full h-[400px] relative rounded-lg overflow-hidden">      
-                                <MapContainer 
-                                    center={[43.1545,-77.6047]} 
-                                    zoom={15} 
-                                    scrollWheelZoom={false} 
-                                    className="absolute inset-0 h-full w-full rounded-lg"
-                                >
-                                    <TileLayer
-                                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                                    />
-                                    <ResizeMapOnModalOpen  isOpen={!!activeEvent}/>
-                                {/* <Marker position={position}>
-
-                                </Marker> */}
-                            </MapContainer>
-                        </div>
-                    </div>
-                )}
-            </Modal>   
+            <EventModal activeEvent={activeEvent} onClose={() => setActiveEvent(null)} />
         </div>
     )
 }

@@ -5,7 +5,7 @@ interface Props {
     isOpen: boolean;
 }
 
-export default function ResizeMapOnModalOpen({ isOpen }: { isOpen: boolean}) {
+export default function ResizeMapOnModalOpen({ isOpen }: Props) {
     const map = useMap();
 
     useLayoutEffect(() => {
@@ -24,7 +24,6 @@ export default function ResizeMapOnModalOpen({ isOpen }: { isOpen: boolean}) {
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, [map]);
-    
+
     return null;
 }
-

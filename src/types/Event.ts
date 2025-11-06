@@ -8,7 +8,9 @@ export interface Event {
     eventType: string;
     background: string;
     location: string;
-    gamesPlayed: Game[];
+    gamesPlayed: Game["Title"][];
     eventDescription?: string;
     flier?: string;
+    registrationSlug?: string;
+    isFeatured?: boolean;
 }
