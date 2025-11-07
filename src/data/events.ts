@@ -1,5 +1,6 @@
 import JBR1 from "../assets/eventFliers/JBR2025.png"
 import JBR2 from "../assets/eventFliers/DTWN585_JBR_Flyer_V2.png"
+import LR13 from "../assets/eventFliers/Lets_ROC_13_Flyer.png";
 import type { Event } from "../types/Event"
 
 const eventsData: Event[] = [
@@ -24,7 +25,7 @@ const eventsData: Event[] = [
         eventType: "Fighting Games",
         gamesPlayed: ["Tekken 8"],
         location: "GLG Gaming Lounge",
-        background: JBR1,
+        background: LR13,
         flier: JBR2,
         registrationSlug: "let-s-roc-13",
     },
@@ -40,8 +41,21 @@ const eventsData: Event[] = [
         flier: JBR2,
         registrationSlug: "let-s-roc-13",
     },
-    {
+        {
         id: 4,
+        date: "2025-11-14",
+        dateOnFlyer: false,
+        eventName: "Jingle Bell Roc",
+        eventType: "Regional",
+        gamesPlayed: ["Rivals of Aether 1", "Rivals of Aether 2", "Street Fighter 6", "Tekken 8", "Super Smash Bros. Melee", "Super Smash Bros. Ultimate"],
+        location: "GLG Lounge",
+        background: JBR1,
+        flier: JBR2,
+        registrationSlug: "let-s-roc-14",
+        isFeatured:true,
+    },
+    {
+        id: 5,
         date: "2025-12-14",
         dateOnFlyer: false,
         eventName: "Jingle Bell Roc",
@@ -50,7 +64,7 @@ const eventsData: Event[] = [
         location: "Kate Gleason Auditorium",
         background: JBR1,
         flier: JBR2,
-        registrationSlug: "let-s-roc-13",
+        registrationSlug: "let-s-roc-14",
     },
 ]
 
