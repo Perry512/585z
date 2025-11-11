@@ -1,7 +1,7 @@
-import Home from "./Home";
-import MeetV2 from "./MeetV2";
-import ContactFormPage from "./ContactFormPage";
-import Who from "./Who";
+import Home from "../pages/Home";
+import MeetV2 from "../pages/MeetV2";
+import ContactFormPage from "../pages/ContactFormPage";
+import Who from "../pages/Who";
 
 const HomePageView = () => {
     return (

@@ -4,12 +4,12 @@ import {
     Routes,
     Navigate,
 } from 'react-router-dom';
-import ScrollToTop from "../components/ScrollToTop.tsx"
+import ScrollToTop from "./ScrollToTop.tsx"
 
-const HomePageView = React.lazy(() => import('./HomePageView'))
-const GalleryPage = React.lazy(() => import('./GalleryPage'))
-const CalendarPage = React.lazy(() => import('./CalendarPage'))
-const AboutUsPage = React.lazy(() => import('./AboutUsPage'))
+const HomePageView = React.lazy(() => import('../views/HomePageView'))
+const GalleryPage = React.lazy(() => import('../pages/GalleryPage.tsx'))
+const CalendarPage = React.lazy(() => import('../pages/CalendarPage.tsx'))
+const AboutUsPage = React.lazy(() => import('../pages/AboutUsPage.tsx'))
 
 function AppView() {
     return (
