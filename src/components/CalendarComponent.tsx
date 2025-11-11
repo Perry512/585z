@@ -32,17 +32,17 @@ export default function CalendarComponent() {
             {Object.entries(groupedEvents).map(([month, events]) => (
                 <div key={month} className="mb-10">
                     <h2 className="text-2xl font-semibold mb-4 px-4">{month}</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 px-4">
                         {events.map((event) => (
                             <div 
                                 key={event.id}
                                 onClick={() => setActiveEvent(event)}
-                                className="relative rounded-md overflow-hidden cursor-pointer transition-transform hover:scale-[1.03]"
+                                className="relative rounded-md overflow-hidden cursor-pointer transition-transform aspect-[3/4] w-[350px] hover:scale-[1.03]"
                             >
                                 <img
                                     src={event.background}
                                     alt={event.eventName}
-                                    className="w-full h-75 object-cover opacity-80"
+                                    className="w-full bg-fit object-contain opacity-80"
                                 />
                                 <div className="absolute top-2 right-50 text-white font-bold py-1 flex flex-row justify-center">
                                     {event.dateOnFlyer !== false && <p className="text-2xl text-gray-300 flex flex-row justify-center">
