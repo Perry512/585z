@@ -1,8 +1,7 @@
 @import "tailwindcss/preflight";
-/* @tailwind utilities; */
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: system-ui, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -81,5 +80,37 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+.hex {
+  clip-path: polygon(
+    25% 0%, 75% 0%,
+    100% 50%,
+    75% 100%, 25% 100%,
+    0% 50%
+  );
+}
+
+@layer components {
+  .menu-link {
+    position: relative;
+    color: #000 !important;
+    font-size: 1.125rem; /* text-lg */
+    transition: color 0.3s ease-in-out;  
+  }
+
+  .menu-link::after {
+    content: '';
+    display: block;
+    height: 2px; /* thin underline */
+    background-color: #b91c1c; /* Tailwind red-700 */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .menu-link:hover::after {
+    transform: scaleX(1) 
   }
 }
