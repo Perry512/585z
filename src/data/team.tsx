@@ -7,9 +7,11 @@ import MadWRLD from "../assets/profilePictures/madwrld.jpg";
 import Shotglass from "../assets/profilePictures/shotglass.png";
 import GhettoSag3 from "../assets/profilePictures/ghettosag3.jpeg";
 import Skar from "../assets/profilePictures/skar.jpg";
-import TheClobster from "../assets/profilePictures/clobster.jpg"
+import TheClobster from "../assets/profilePictures/clobster.jpg";
 import Gibbs from "../assets/profilePictures/gibbs.png";
-import Tyger from "../assets/profilePictures/tyger.jpg"
+import Tyger from "../assets/profilePictures/tyger.jpg";
+import Gabby from "../assets/profilePictures/gabby.png";
+import lazyTitan from "../assets/profilePictures/lazytitan.jpeg";
 
 export const team: Person[] = [
     {
@@ -194,19 +196,23 @@ export const team: Person[] = [
             games.find(g => g.Title === "Tekken 8")!,
         ],
         bio: "\"Im terrible with bio's, but I'm way better with people! I'm a certified yapper, but no one has complained (much) so far! If you see me, ask me about FighterZ Fatale! Don't ask about Epic the Musical, you will get stuck in a non-skippable 2 1/2 hour cutscene.\"",
-        imageUrl: TheClobber
+        imageUrl: Gabby
     },
         {
         id:11,
-        name: "The Clobber",
-        pronouns: "He/Him",
-        role: "Media Director",
+        name: "Bryanna O.",
+        pronouns: "She/Her",
+        role: "Fatale Exec assistant",
         location: "Rochester, NY",
         contact: {
-            [SocialPlatform.Discord]: ".megameme"
         },
-        bio: "test test test3",
-        imageUrl: TheClobber
+        bio: "One of the founding members of the 585Z| Fighterz Fatale. Just a casual gamer who enjoys some cozy/fighting games. Hoping to make the gaming world better and more enjoyable for female gamers ❤️",
+        imageUrl: lazyTitan,
+        gamesPlayed: [
+            games.find(g => g.Title === "Street Fighter 6")!,
+            games.find(g => g.Title === "2XKO")!,
+            games.find(g => g.Title === "Mortal Kombat")!,
+        ]
     },
         {
         id:12,
