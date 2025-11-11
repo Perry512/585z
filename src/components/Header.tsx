@@ -9,43 +9,41 @@ import eventsData from '../data/events';
 function Header () {
     const { isOpen, openModal, closeModal } = useModal();
     const closestEvent = GetClosestEvent(eventsData)
-    const featuredEvent = eventsData.find((e) => e.isFeatured) || closestEvent ? closestEvent : null;
+    const featuredEvent = eventsData.find((e) => e.isFeatured) || closestEvent;
 
     return ( 
         <>
-            <header className="bg-red-800 flex flex-wrap justify-between items-center w-full p-5">    
+            <header className="flex flex-wrap justify-between items-center w-full p-5 fixed left-0 top-0 z-[500] px-6 py-4 h-20 bg-gradient-to-b from-red-800 to-zinc-700/70 shadow-md">    
                 <div className='flex flex-row justify-center mx-10'>
                     <div>
-                        <Link to="/home" className="text-black hover:text-blue-100 transition duration-300 ease-in-out text-lg flex flex-row">
-                            <img src={logo2} className="mr-3 h-6 sm:h-9" alt="585Z Logo" />
+                        <Link to="/home" className="text-black hover:text-red-700 transition duration-300 ease-in-out text-lg flex flex-row">
+                            <img src={logo2} className="mr-3 h-6 sm:h-9 -translate-y-1" alt="585Z Logo" />
                                 <div className="text-2xl"> 585FighterZ</div>
                         </Link>
                     </div>
                     <ul className='ml-10 translate-y-px'>
                         <li className="inline-block mr-10"> 
-                            <Link to="/gallery" className="text-black hover:text-blue-100 transition duration-300 ease-in-out text-lg">
-                                Gallery
-                            </Link>
-                        </li>
-                        <li className="inline-block mr-10"> 
-                            <Link to="/calendar" className="text-black hover:text-blue-100 transition duration-300 ease-in-out text-lg">
-                                Calendar 
-                            </Link>
-                        </li>
-                        <li className="inline-block mr-10"> 
-                            <Link to="/calendar" className="text-black hover:text-blue-100 transition duration-300 ease-in-out text-lg">
+                            <Link to="/aboutUs" className="menu-link">
                                 About Us
                             </Link>
                         </li>
                         <li className="inline-block mr-10"> 
-                            <Link to="/calendar" className="text-black hover:text-blue-100 transition duration-300 ease-in-out text-lg">
+                            <Link to="/calendar" className="menu-link">
+                                Calendar 
+                            </Link>
+                        </li>
+                        <li className="inline-block mr-10"> 
+                            <Link to="/gallery" className="menu-link">
+                                Gallery
+                            </Link>
+                        </li>  
+                        <li className="inline-block mr-10"> 
+                            <Link to="/calendar" className="menu-link">
                                 PartnerZ & SponsorZ 
                             </Link>
                         </li>
                         <li className="inline-block mr-10">
-                            <a href='#contact' rel="noopener noreferrer" className='text-black text-lg hover:text-blue-100 transition duration-300 ease-in-out'>
-                                Contact Us! 
-                            </a>
+                            <a href='#contact' rel="noopener noreferrer" className='text-black text-lg hover:text-red-700 transition duration-300 ease-in-out' />
                         </li>
                     </ul>
                 </div>
