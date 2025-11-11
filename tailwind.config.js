@@ -19,6 +19,9 @@ module.exports = {
         300: '300ms',
         600: '600ms',
       },
+      fontFamily: {
+        sans: ['Helvetica', 'Arial', 'sans-serif'],
+      }
     },
   },
   plugins: [],
