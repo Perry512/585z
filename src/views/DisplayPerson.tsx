@@ -48,7 +48,7 @@ const DisplayPerson: React.FC<PersonViewProps>  = ({
       )}
 
       {/* Image Section */}
-      <div className="md:w-1/2 w-1/2 aspect-[3/4] bg-black"
+      <div className="w-[100vw] h-[30vh] md:w-1/2 md:h-full aspect-[3/4] bg-black"
           style={{ 
             backgroundImage: `url(${imageUrl})`,
             backgroundPosition: `${panX}% ${panY}%`,
@@ -67,7 +67,7 @@ const DisplayPerson: React.FC<PersonViewProps>  = ({
           <p className="text-sm text-gray-700 mt-1">{role}</p>
           <p className="text-sm text-gray-600 mt-1">{location}</p>
           {contact && <SocialLinksDisplay contacts={contact} />}
-          <p className="text-sm text-gray-800 mt-4 leading-relaxed">{bio}</p>
+          <p className="text-lg text-gray-800 mt-4 leading-relaxed">{bio}</p>
         </div>
       </div>
     </div>
