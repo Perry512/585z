@@ -1,7 +1,8 @@
 @import "tailwindcss/preflight";
+@import "@fontsource/orbitron/600.css";
 
 :root {
-  font-family: system-ui, Helvetica, Arial, sans-serif;
+  font-family: "Orbitron" , sans-serif;
   line-height: 1.5;
   font-weight: 400;
 

@@ -20,7 +20,7 @@ module.exports = {
         600: '600ms',
       },
       fontFamily: {
-        sans: ['Helvetica', 'Arial', 'sans-serif'],
+        sans: ['"Orbitron"' , 'sans-serif'],
       }
     },
   },
