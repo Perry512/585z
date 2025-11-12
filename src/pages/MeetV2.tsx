@@ -55,7 +55,7 @@ export default function MeetV2() {
         <h3 className="text-2xl text-white font-semibold mb-4 border-b border-gray-700 pb-2">
           Members
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-6 pb-10">
           {others.map((member) => (
             <div
               key={member.id}
