@@ -26,7 +26,7 @@ function Header () {
                     onClick={() => {if(menuOpen) { setMenuOpen(false); }}}
                 >
                     <img src={logo2} className="h-[60px] md:h-10 mr-3 -translate-y-1" alt="585Z Logo" />
-                    <span className="hidden md:flex text-xl translate-y-1"> 585FighterZ</span>
+                    <span className="hidden md:flex text-xl translate-y-1 hover:text-gray-400 hover:scale-[1.1] hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.55)] transition delay-100 duration-200"> 585FighterZ</span>
                 </Link>
 
                 {/* Desktop View */}
