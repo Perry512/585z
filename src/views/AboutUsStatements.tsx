@@ -5,7 +5,7 @@ export default function AboutUsStatements() {
         <section className="bg-black text-white px-10 sm:px-20 py-20 space-y-32 relative overflow-hidden">
             
             {/* Background */}
-            <div className="absolute inset-0 opacity-10 bg-center bg-[length:700px] pointer-events-none"style={{ backgroundImage: `url(${hexes})`, backgroundPosition: "50% 20%"}} />
+            <div className="absolute inset-0 opacity-10 bg-center bg-[length:700px] pointer-events-none" style={{ backgroundImage: `url(${hexes})`, backgroundPosition: "50% 20%"}} />
 
             <div className="relative z-10">
                 {/* Text Statement */}
