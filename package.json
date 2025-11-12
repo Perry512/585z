@@ -13,6 +13,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@fontsource/orbitron": "^5.2.8",
     "@icons-pack/react-simple-icons": "^13.7.0",
     "@tailwindcss/vite": "^4.1.12",
     "body-scroll-lock": "^4.0.0-beta.0",
