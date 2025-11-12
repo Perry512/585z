@@ -35,7 +35,14 @@ const SocialLinksDisplay: React.FC<SocialLinkDisplayProps> = ({ contacts }) => {
                         className="text-gray-600 hover:text-red-600 transition flex flex-row"
                         title={platform}
                     >
-                        <Icon className="w-5 h-5 translate-y-0.5" />&nbsp; |&nbsp; <div>{username}</div>
+                        {/* Icon */}
+                        <span><Icon className="w-5 h-5 translate-y-0.5 flex-shrink-0 text-lg" /></span>
+                        {/* Divider */}
+                        <span className="text-gray-400">|</span>
+                        {/* Username */}
+                        <span className="truncate max-w-[8rem] sm:max-w-[10rem] md:max-w-[12rem]">
+                            {username}
+                        </span>
                     </a>
                 );
             })}
