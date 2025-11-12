@@ -17,7 +17,7 @@ function Header () {
 
     return ( 
         <>
-            <header className="flex justify-between items-center w-full px-6 py-4 fixed left-0 top-0 z-[500] bg-gradient-to-b from-red-800 to-zinc-700/70 shadow-md"> 
+            <header className="flex justify-between items-center w-full px-6 py-4 fixed left-0 top-0 z-[500] bg-gradient-to-b from-red-800 via-red-900/90 to-zinc-800/70 backdrop-blur-md shadow-md"> 
 
                 {/* Logo */}
                 <Link 
@@ -25,12 +25,12 @@ function Header () {
                     className="text-black hover:text-red-700 transition duration-300 ease-in-out text-lg flex flex-row"
                     onClick={() => {if(menuOpen) { setMenuOpen(false); }}}
                 >
-                    <img src={logo2} className="mr-3 h-6 -translate-y-1" alt="585Z Logo" />
-                    <span className="text-2xl"> 585FighterZ</span>
+                    <img src={logo2} className="h-[60px] md:h-10 mr-3 -translate-y-1" alt="585Z Logo" />
+                    <span className="hidden md:flex text-xl translate-y-1"> 585FighterZ</span>
                 </Link>
 
                 {/* Desktop View */}
-                    <ul className='hidden md:flex space-x-10 text white text-lg'>
+                    <ul className='hidden md:flex text-lg'>
                         <li className="inline-block mr-10"> <Link to="/aboutUs" className="menu-link"> About Us </Link> </li>
                         <li className="inline-block mr-10"> <Link to="/calendar" className="menu-link"> Calendar</Link></li>
                         <li className="inline-block mr-10"> <Link to="/gallery" className="menu-link">Gallery</Link></li>  
@@ -42,7 +42,7 @@ function Header () {
                     <button className=" hidden md:flex bg-black px-5" onClick={toggleModal}><GiAcousticMegaphone size={25} color='red'/></button>
 
                     <button
-                        className="md:hidden bg-black text-white"
+                        className="md:hidden bg-transparent text-black"
                         onClick={() => setMenuOpen(!menuOpen)}
                     >
                         {menuOpen ? <FiX size={26} /> : <FiMenu size={26} />}
@@ -52,11 +52,11 @@ function Header () {
 
             {/* Mobile Dropdown */}
             {menuOpen && (
-                <div className="md:hidden absolute top-20 w-full bg-zinc-800/95 text-white text-center py-6 space-y-5 shadow-lg z-[400]">
-                    <Link to="/aboutUs" onClick={() => setMenuOpen(false)}>About Us</Link><br />
-                    <Link to="/calendar" onClick={() => setMenuOpen(false)}>Calendar</Link><br />
-                    <Link to="/gallery" onClick={() => setMenuOpen(false)}>Gallery</Link><br />
-                    <Link to="/calendar" onClick={() => setMenuOpen(false)}>PartnerZ & SponsorZ</Link><br />
+                <div className="md:hidden fixed w-full bg-zinc-800/95 text-white text-center pt-[20vh] pb-10 space-y-5 shadow-lg z-[400] backdrop-blur-md">
+                    <Link to="/aboutUs" className="text-gray-400 text-2xl" onClick={() => setMenuOpen(false)}>About Us</Link><br />
+                    <Link to="/calendar" className="text-gray-400 text-2xl" onClick={() => setMenuOpen(false)}>Calendar</Link><br />
+                    <Link to="/gallery" className="text-gray-400 text-2xl" onClick={() => setMenuOpen(false)}>Gallery</Link><br />
+                    <Link to="/calendar" className="text-gray-400 text-2xl" onClick={() => setMenuOpen(false)}>PartnerZ & SponsorZ</Link><br />
                 </div>
             )}
             {isOpen && <EventModal activeEvent={featuredEvent} onClose={closeModal} /> }
