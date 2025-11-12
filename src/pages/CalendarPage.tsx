@@ -1,7 +1,6 @@
 import CalendarComponent from "../components/CalendarComponent"
 import Layout from "../components/Layout"
 import gal4 from "../assets/photoGal/gal4.jpg"
-import LargeSocialLinkBanner from "../components/LargeSocialLinkBanner"
 
 export default function CalendarPage() {
     return (
@@ -13,7 +12,6 @@ export default function CalendarPage() {
                     </div>
                 </div>
                 {/* Links to signups */}
-                <LargeSocialLinkBanner />
                 <div className="min-h-[100vh]">
                     <CalendarComponent />
                 </div>

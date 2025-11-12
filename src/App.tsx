@@ -1,9 +1,9 @@
 import './App.css'
 import Header from './components/Header';
-import Links from './pages/Links';
 import Footer from './components/Footer';
 import AppView  from './components/AppView';
 import { BrowserRouter } from 'react-router-dom';
+import LargeSocialLinkBanner from './components/LargeSocialLinkBanner';
 
 function App() {
 
@@ -12,7 +12,7 @@ function App() {
       <div className="w-full">
         <Header />
         <AppView />
-        <Links />
+        <LargeSocialLinkBanner />
         <Footer />
       </div>
     </BrowserRouter>
