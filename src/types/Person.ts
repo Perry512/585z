@@ -16,4 +16,5 @@ export interface Person {
     panX?: number;
     panY?: number;
     scale?: number;
+    leadership?: boolean;
 }

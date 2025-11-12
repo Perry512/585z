@@ -27,7 +27,8 @@ export const team: Person[] = [
         imageUrl: TheClobber,
         gamesPlayed: [
             games.find(g => g.Title === "Street Fighter 6")!,
-        ]
+        ],
+        leadership: true,
     },
     {
         id:2,
@@ -47,6 +48,7 @@ export const team: Person[] = [
             games.find(g => g.Title === "Granblue Fantasy: Versus Rising")!,
         ],
         panX: 80,
+        leadership:true,
     },
     {
         id:3,
@@ -65,6 +67,7 @@ export const team: Person[] = [
             games.find(g => g.Title === "Street Fighter 6")!,
             games.find(g => g.Title === "2XKO")!,
         ],
+        leadership: true,
     },
     {
         id:4,
@@ -196,7 +199,8 @@ export const team: Person[] = [
             games.find(g => g.Title === "Tekken 8")!,
         ],
         bio: "\"Im terrible with bio's, but I'm way better with people! I'm a certified yapper, but no one has complained (much) so far! If you see me, ask me about FighterZ Fatale! Don't ask about Epic the Musical, you will get stuck in a non-skippable 2 1/2 hour cutscene.\"",
-        imageUrl: Gabby
+        imageUrl: Gabby,
+        leadership: true,
     },
         {
         id:11,
