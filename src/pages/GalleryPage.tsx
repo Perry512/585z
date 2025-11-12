@@ -1,4 +1,4 @@
-import PhotoGallery from "./PhotoGallery";
+import PhotoGallery from "../views/PhotoGallery";
 import Layout from "../components/Layout";
 const GalleryPage = () => {
     return (
