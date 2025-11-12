@@ -1,12 +1,13 @@
 import Layout from "../components/Layout"
+import hexes from "../assets/Hex_Example.png"
 
 export default function ContactFormPage () {
     return(
         <Layout>
-            <div className='h-50vh w-100vh bg-red-700 p-1 flex flex-col items-center justify-around' id="contact">
+            <div className='h-50vh w-100vh bg-black p-1 flex flex-col items-center justify-around opacity-50 bg-center pointer-events-none' id="contact" style={{ backgroundImage: `url(${hexes})`, backgroundPosition: "50% 20%"}}>
 
                 {/* Contact form header */}
-                <div className="p-4 w-auto mb-5 flex flex-col items-center justify-center"> <h1 className="font-bold text-black"> Contact Us!</h1> </div> 
+                <div className="p-4 w-auto mb-5 flex flex-col items-center justify-center"> <h1 className="font-bold text-red-600"> Contact Us!</h1> </div> 
 
                 { /* Contact form */}
                 <div className="py-10 flex flex-row border-2 justify-center items-center border-black w-4/5 max-w-md mx-auto bg-white mb-10">
