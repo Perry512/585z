@@ -1,8 +1,23 @@
 import JBR1 from "../assets/eventFliers/JBR2025.png"
-import JBR2 from "../assets/eventFliers/DTWN585_JBR_Flyer_V2.png"
+import JBR2 from "../assets/eventFliers/DTWN585_JBR_Flyer_V2.png";
+import LR12 from "../assets/eventFliers/Lets_ROC_12_Flyer.png";
 import LR13 from "../assets/eventFliers/Lets_ROC_13_Flyer.png";
 import LR14 from "../assets/eventFliers/lr14_flyer.png";
 import THURSDAYS from "../assets/eventFliers/AnimeThursdays.jpg";
+
+import lr12sf6t8 from "../assets/results/lr12/sf6t8.jpg";
+import lr12sf6t3 from "../assets/results/lr12/lr12sf6t3.jpg";
+import lr12ggstt8 from "../assets/results/lr12/lr12ggstt8.jpg";
+import lr12ggstt3 from "../assets/results/lr12/lr12ggstt3.jpg";
+import lr12t8t8 from "../assets/results/lr12/lr12t8t8.jpg";
+import lr12t8t3 from "../assets/results/lr12/lrt8t3.jpg";
+import lr132xt8 from "../assets/results/lr13/lr132xt8.jpg";
+import lr13sf6t8 from "../assets/results/lr13/lr13sf6t8.jpg";
+import lr13t8t8 from "../assets/results/lr13/lr13t8t8.jpg";
+import lr13ggstt8 from "../assets/results/lr13/lr13ggstt8.jpg";
+import lr13ssbut8 from "../assets/results/lr13/lr13ssbut8.jpg";
+import lr13roa2t8 from "../assets/results/lr13/lr13roa2t8.jpg";
+import lr13roat8 from "../assets/results/lr13/lr13roat8.jpg";
 
 import type { Event } from "../types/Event"
 
@@ -11,27 +26,74 @@ const eventsData: Event[] = [
         id: 1,
         date: "2025-10-25",
         dateOnFlyer: false,
-        eventName: "Let's Roc monthly",
-        eventType: "Fighting Games",
+        eventName: "Let's Roc 12",
+        eventType: "Monthly",
         gamesPlayed: ["Street Fighter 6", "2XKO"],
         location: "GLG Gaming Lounge",
-        background: JBR1,
-        flier: JBR2,
+        background: LR12,
         registrationSlug: "let-s-roc-12",
         eventDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In accumsan efficitur sem, et consectetur est venenatis a. In vel lorem felis. Suspendisse lobortis nec ex sit amet lobortis. Nunc id vehicula felis. Sed semper est ac odio varius, nec fermentum tellus semper. Proin imperdiet ullamcorper ullamcorper. Sed quam tortor, placerat ut convallis nec, aliquet vel nisi. Sed id tellus sit amet elit aliquam ullamcorper. Vestibulum nunc erat, maximus a risus sit amet, egestas dictum risus. Nunc consectetur fermentum augue, a pretium ante dictum non. Morbi feugiat erat tellus, sit amet vestibulum sapien fringilla eget. Etiam consectetur urna id turpis iaculis vulputate. Fusce accumsan nisi at leo aliquam tincidunt.",
         tournament:true,
+
+        results: [
+            {
+                game:"Street Fighter 6",
+                top8Graphic: lr12sf6t8,
+                top3Photo: lr12sf6t3,
+            },
+            {
+                game:"Tekken 8",
+                top8Graphic: lr12t8t8,
+                top3Photo: lr12t8t3,
+            },
+            {
+                game:"Guilty Gear: Strive",
+                top8Graphic: lr12ggstt8,
+                top3Photo: lr12ggstt3,
+            },
+        ],
     },
     {
         id: 2,
         date: "2025-10-10",
         dateOnFlyer: false,
-        eventName: "Jingle Bell Roc",
+        eventName: "Let's Roc 13",
         eventType: "Fighting Games",
         gamesPlayed: ["Tekken 8"],
         location: "GLG Gaming Lounge",
         background: LR13,
-        flier: JBR2,
         registrationSlug: "let-s-roc-13",
+        tournament:true,
+        results: [
+            {
+                game:"2XKO",
+                top8Graphic: lr132xt8,
+            },
+            {
+                game:"Street Fighter 6",
+                top8Graphic: lr13sf6t8,
+            },
+            {
+                game:"Tekken 8",
+                top8Graphic: lr13t8t8,
+            },
+            {
+                game:"Guilty Gear: Strive",
+                top8Graphic: lr13ggstt8,
+            },
+            {
+                game:"Super Smash Bros. Ultimate",
+                top8Graphic: lr13ssbut8,
+            },
+            {
+                game:"Rivals of Aether 2",
+                top8Graphic: lr13roa2t8,
+            },
+            {
+                game:"Rivals of Aether",
+                top8Graphic: lr13roat8,
+            },
+        ],
     },
     {
         id: 3,
