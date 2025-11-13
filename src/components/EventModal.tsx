@@ -34,23 +34,31 @@ export default function EventModal({ activeEvent, onClose }: EventModalProps) {
                     </p>
                     <p className="text-gray-500 mt-1">{activeEvent.location}</p>
                     <p className="text-black mt-5">{activeEvent.eventDescription}</p>  
-                    <div className="pt-2 mt-2 mb-10 w-full h-[600px] relative rounded-lg overflow-hidden flex flex-row justify-center align-middle">      
+                    <div className="pt-2 mt-2 mb-10 w-full h-[600px] relative rounded-lg overflow-y-visible flex flex-row justify-center align-middle">      
                         {isPast && isTournament ? (
                             <div className="flex flex-col items-center gap-4">
-                                {activeEvent.top8Graphic && (
-                                    <img
-                                        src={activeEvent.top8Graphic}
-                                        alt="Top 8 Graphic"
-                                        className="max-w-full rounded-md"
-                                    />
-                                )}
-                                {activeEvent.top3Photo && (
-                                    <img
-                                        src={activeEvent.top3Photo}
-                                        alt="Top 3 Picture"
-                                        className="max-w-[60%] rounded-md"
-                                    />
-                                )}
+                                {activeEvent.results?.map((result, index) => (
+                                    <div
+                                        key={index}
+                                        className="flex flex-col items-center gap-4 w-full max-w-3xl"
+                                    >
+                                        <h3 className="text-2xl font-semibold text-red-500 text-shadow-black mb-2"> {result.game}</h3>
+                                    {result.top8Graphic && (
+                                        <img
+                                            src={result.top8Graphic}
+                                            alt={`${result.game} Top 8`}
+                                            className="rounded-md w-full object-contain shadow-md"
+                                        />
+                                    )}
+                                    {result.top3Photo && (
+                                        <img
+                                            src={result.top3Photo}
+                                            alt={`${result.game} Top 3`}
+                                            className="rounded-md w-2/3 object-contain shadow-md"
+                                        />
+                                    )}
+                                </div>
+                            ))}
                             </div>
                         ) : (
                             <div className="w-full h-full">
