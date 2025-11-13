@@ -1,5 +1,11 @@
 import type { Game } from "./Games";
 
+export interface EventResult {
+    game: string;
+    top8Graphic?: string;
+    top3Photo?: string;
+}
+
 export interface Event {
     id: number;
     date: string;
@@ -13,4 +19,7 @@ export interface Event {
     flier?: string;
     registrationSlug?: string;
     isFeatured?: boolean;
+    tournament?: boolean;
+
+    results?: EventResult[];
 }

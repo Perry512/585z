@@ -11,59 +11,67 @@ import type { Event } from "../types/Event"
 export default function CalendarComponent() {
     const [activeEvent, setActiveEvent] = useState<Event | null>(null);
 
-    const groupedEvents = useMemo(() => {
+    const now = new Date();
+
+    const {upcomingEvents, pastEvents } = useMemo(() => {
         const sorted = [...eventsData].sort(
             (a, b) => new Date(a.date).getTime()- new Date(b.date).getTime()
         );
 
-        return sorted.reduce((groups: Record<string, Event[]>, event) => {
-            const month = new Date(event.date).toLocaleString("default", {
-                month: "long",
-                year: "numeric",
-            })
-            if (!groups[month]) groups[month] = []
-            groups[month].push(event)
-            return groups
-        }, {})
-    }, [])
+        const upcoming = sorted.filter((e) => new Date(e.date) >= now);
+        const past = sorted.filter((e) => new Date(e.date) < now);
+
+        return { upcomingEvents: upcoming, pastEvents: past };
+    }, []);
+
+    const renderEventCard = (event: Event) => (
+        <div
+            key={event.id}
+            onClick={() => setActiveEvent(event)}
+            className="relative rounded-md overflow-hidden cursor-pointer transition-transform aspect-[3/4] w-[350px] hover:scale-[1.03]"
+        >
+            <img
+                src={event.background}
+                alt={event.eventName}
+                className="w-full bg-fit object-contain opacity-80"
+            />
+            <div className="absolute top-2 right-50 text-white font-bold py-1 flex flex-row justify-center">
+                {event.dateOnFlyer !== false && (
+                    <p className="text-2xl text-gray-300 flex flex-row justify-center">
+                        {new Date(event.date).toLocaleDateString(undefined, {
+                            month: "short",
+                            day: "numeric",
+                        })}
+                    </p>
+                )}
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-4 flex flex-col justify-end">
+                <h3 className="text-lg font-bold">{event.eventName}</h3>
+                <p className="text-sm text-yellow-400">{event.eventType}</p>
+                <p className="text-xs text-gray-400 mt-1">
+                    {event.gamesPlayed.join(" * ")}
+                </p>
+            </div>
+        </div>
+    )
 
     return(
         <div className="bg-zinc-900 text-white min-h-screen py-10">
-            {Object.entries(groupedEvents).map(([month, events]) => (
-                <div key={month} className="mb-10">
-                    <h2 className="text-2xl font-semibold mb-4 px-4">{month}</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 px-4">
-                        {events.map((event) => (
-                            <div 
-                                key={event.id}
-                                onClick={() => setActiveEvent(event)}
-                                className="relative rounded-md overflow-hidden cursor-pointer transition-transform aspect-[3/4] w-[350px] hover:scale-[1.03]"
-                            >
-                                <img
-                                    src={event.background}
-                                    alt={event.eventName}
-                                    className="w-full bg-fit object-contain opacity-80"
-                                />
-                                <div className="absolute top-2 right-50 text-white font-bold py-1 flex flex-row justify-center">
-                                    {event.dateOnFlyer !== false && <p className="text-2xl text-gray-300 flex flex-row justify-center">
-                                        {new Date(event.date).toLocaleDateString(undefined, {
-                                            month: "short",
-                                            day: "numeric",
-                                        })}
-                                    </p>}
-                                </div>
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-4 flex flex-col justify-end">
-                                    <h3 className="text-lg font-bold">{event.eventName}</h3>
-                                    <p className="text-sm text-yellow-400">{event.eventType}</p>
-                                    <p className="text-xs text-gray-400 mt-1">
-                                        {event.gamesPlayed.join(" • ")}
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+            {/* Upcoming */}
+            <section className="mb-16">
+                <h2 className="text-3xl font-bold mb-6 px-4">Upcoming Events</h2>
+                <div className="flex flex-wrap gap-6 justify-center px-4">{upcomingEvents.map(renderEventCard)}</div>
+            </section>
+            {/* Past */}
+            <section>
+                <h2 className="text-3xl font-bold mb-6 px-4">Past Events</h2>
+                <div className="flex flex-wrap gap-6 justify-center px-4">
+                    {pastEvents
+                        .filter((e) => e.tournament)
+                        .map(renderEventCard)
+                    }
                 </div>
-            ))}         
+            </section>         
             <EventModal activeEvent={activeEvent} onClose={() => setActiveEvent(null)} />
         </div>
     )
