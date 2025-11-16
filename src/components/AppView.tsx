@@ -10,6 +10,7 @@ const HomePageView = React.lazy(() => import('../views/HomePageView'))
 const GalleryPage = React.lazy(() => import('../pages/GalleryPage.tsx'))
 const CalendarPage = React.lazy(() => import('../pages/CalendarPage.tsx'))
 const AboutUsPage = React.lazy(() => import('../pages/AboutUsPage.tsx'))
+const SponsorsPage = React.lazy(() => import('../pages/SponsorsPage.tsx'))
 
 function AppView() {
     return (
@@ -21,6 +22,7 @@ function AppView() {
                 <Route path="/calendar" element={<CalendarPage />} />
                 <Route path="/gallery" element={<GalleryPage />} />
                 <Route path="/aboutUs" element={<AboutUsPage />} />
+                <Route path="/sponsors" element={<SponsorsPage />} />
             </Routes>
         </Suspense>
     )

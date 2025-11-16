@@ -22,7 +22,7 @@ function Header () {
                 {/* Logo */}
                 <Link 
                     to="/home" 
-                    className="text-black hover:text-red-700 transition duration-300 ease-in-out text-lg flex flex-row"
+                    className="text-white hover:text-red-700 transition duration-300 ease-in-out text-lg flex flex-row"
                     onClick={() => {if(menuOpen) { setMenuOpen(false); }}}
                 >
                     <img src={logo2} className="h-[60px] md:h-10 mr-3 -translate-y-1" alt="585Z Logo" />
@@ -34,7 +34,7 @@ function Header () {
                         <li className="inline-block mr-10"> <Link to="/aboutUs" className="menu-link"> About Us </Link> </li>
                         <li className="inline-block mr-10"> <Link to="/calendar" className="menu-link"> Calendar</Link></li>
                         <li className="inline-block mr-10"> <Link to="/gallery" className="menu-link">Gallery</Link></li>  
-                        <li className="inline-block mr-10"> <Link to="/calendar" className="menu-link">PartnerZ & SponsorZ </Link></li>
+                        <li className="inline-block mr-10"> <Link to="/sponsors" className="menu-link">PartnerZ & SponsorZ </Link></li>
                         <li className="inline-block mr-10"><a href='#contact' rel="noopener noreferrer" className='text-black text-lg hover:text-red-700 transition duration-300 ease-in-out' /></li>
                     </ul>
 
@@ -56,7 +56,7 @@ function Header () {
                     <Link to="/aboutUs" className="text-gray-400 text-2xl" onClick={() => setMenuOpen(false)}>About Us</Link><br />
                     <Link to="/calendar" className="text-gray-400 text-2xl" onClick={() => setMenuOpen(false)}>Calendar</Link><br />
                     <Link to="/gallery" className="text-gray-400 text-2xl" onClick={() => setMenuOpen(false)}>Gallery</Link><br />
-                    <Link to="/calendar" className="text-gray-400 text-2xl" onClick={() => setMenuOpen(false)}>PartnerZ & SponsorZ</Link><br />
+                    <Link to="/sponsors" className="text-gray-400 text-2xl" onClick={() => setMenuOpen(false)}>PartnerZ & SponsorZ</Link><br />
                 </div>
             )}
             {isOpen && <EventModal activeEvent={featuredEvent} onClose={closeModal} /> }
