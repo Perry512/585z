@@ -96,7 +96,7 @@ button:focus-visible {
 @layer components {
   .menu-link {
     position: relative;
-    color: #000 !important;
+    color: #ffffff !important;
     font-size: 1.125rem; /* text-lg */
     transition: color 0.3s ease-in-out;  
   }
