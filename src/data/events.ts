@@ -1,4 +1,4 @@
-import JBR1 from "../assets/eventFliers/JBR2025.png"
+import JBR1 from "../assets/eventFliers/JBRoc_2_Flyer.png"
 import JBR2 from "../assets/eventFliers/DTWN585_JBR_Flyer_V2.png";
 import LR12 from "../assets/eventFliers/Lets_ROC_12_Flyer.png";
 import LR13 from "../assets/eventFliers/Lets_ROC_13_Flyer.png";
