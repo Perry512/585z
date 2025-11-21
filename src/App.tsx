@@ -9,12 +9,10 @@ function App() {
 
   return (
     <BrowserRouter basename="/585z">
-      <div className="w-full">
         <Header />
         <AppView />
         <LargeSocialLinkBanner />
         <Footer />
-      </div>
     </BrowserRouter>
   )
 }
