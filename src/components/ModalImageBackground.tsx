@@ -14,7 +14,7 @@ export default function ModalImageBackground({ photo, maxHeight = "100vh"}: Prop
     const backgroundPosition = `${panX}% ${panY}%`;
 
     return (
-        <div className="w-full flex items-center justify-center">
+        <div className="w-[100vw] flex items-center justify-center">
             <div 
                 aria-hidden={!photo.alt}
                 style={{

@@ -9,7 +9,7 @@ export default function HomePageVideo() {
     
     if (!parent) return null;
     return(
-        <div className='h-full w-full flex flex-col items-center justify-center'>
+        <div className='h-full w-[60vw] flex flex-col items-center justify-center'>
             {/* <iframe 
                 src={`https://player.twitch.tv/?video=2547779457&parent=${parent}&muted=true&autoplay=true`}
                 height="90%"
