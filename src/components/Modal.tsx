@@ -33,16 +33,15 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
 
     return createPortal(
             <div
-                className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
+                className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 w-[100vw]"
                 onClick={onClose}
             >
                 <div
                     id="targetElementId"
                     ref={targetRef}
                     className="
-                        rounded-2xl shadow-lg overflow-y-auto max-h-[90vh]
-                        w-[60%] md:w-[60%] lg:w-[50%] xl:w-[50%]
-                        bg-white
+                        rounded-2xl shadow-lg overflow-y-auto 
+                        max-h-[90vh] w-[80%] xl:w-[70%] bg-white
                     "
                     onClick={(e) => e.stopPropagation()}
                 >
