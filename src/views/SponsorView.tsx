@@ -30,7 +30,7 @@ export default function SponsorView() {
         <div className="min-h-[100vh]">
             
                 <h2 className="text-3xl font-bold mb-10 px-4 text-white mt-10">Our Sponsors</h2>
-                <div className="mx-20 flex flex-wrap items-center justify-center gap-8">
+                <div className="mx-20 flex flex-wrap items-top justify-center gap-8">
                     {sponsors.map(renderSponsorCard)}
                 </div>
         </div>
