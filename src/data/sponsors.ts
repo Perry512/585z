@@ -4,6 +4,7 @@ import glgLogo from "../assets/sponsorLogos/glglogo.png"
 import lGSLogo from "../assets/sponsorLogos/lGS.png"
 import theZone from "../assets/sponsorLogos/941ZoneLogo.png";
 import valhalCC from "../assets/sponsorLogos/valhalLogo.png";
+import eePathway from "../assets/sponsorLogos/eeLogo.jpeg";
 
 export const sponsors: Sponsor[] = [
     {
@@ -26,4 +27,9 @@ export const sponsors: Sponsor[] = [
         logo: valhalCC,
         link: "https://www.vccmma.com/",
     },
+    {
+        name: "Exercise Express Pathways",
+        logo: eePathway,
+        link: "https://www.eepathways.us/",
+    }
 ]
