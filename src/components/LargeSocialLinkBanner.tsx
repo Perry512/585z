@@ -4,7 +4,7 @@ import hexes from "../assets/Hex_Example.png";
 export default function LargeSocialLinkBanner() {
     return (
         <>
-            <div className="min-h-[10vh] bg-red-700 flex flex-col sm:flex-row justify-center items-center gap-5" style={{ backgroundImage: `url(${hexes})`, backgroundPosition: "50% 20%"}}>
+            <div className="min-h-[10vh] bg-red-700 flex flex-row justify-center items-center gap-1 sm:gap-5" style={{ backgroundImage: `url(${hexes})`, backgroundPosition: "50% 20%"}}>
                 <div 
                     className="flex flex-row p-10">
                     <a 
