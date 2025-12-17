@@ -25,6 +25,7 @@ export default function EventModal({ activeEvent, onClose }: EventModalProps) {
                         alt={activeEvent.eventName}
                         className="max-h-[80vh] object-contain rounded-md"
                     />
+                    <div className="mx-10 flex flex-col items-center">
                     <h2 className="text-2xl font-bold mt-4">
                         {activeEvent.eventName}
                     </h2>
@@ -33,7 +34,8 @@ export default function EventModal({ activeEvent, onClose }: EventModalProps) {
                         Games: {activeEvent.gamesPlayed.join(", ")}
                     </p>
                     <p className="text-gray-500 mt-1">{activeEvent.location}</p>
-                    <p className="text-black mt-5">{activeEvent.eventDescription}</p>  
+                    <p className="text-black mt-5">{activeEvent.eventDescription}</p> 
+                    </div> 
                     <div className="pt-2 mt-2 mb-10 w-full h-[600px] relative rounded-lg overflow-y-visible flex flex-row justify-center align-middle">      
                         {isPast && isTournament ? (
                             <div className="flex flex-col items-center gap-4">
