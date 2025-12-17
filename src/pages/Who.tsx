@@ -2,7 +2,7 @@ import Layout from "../components/Layout";
 import WhoAreWeSection from "../components/WhoAreWeSection";
 import { useFadeInOnScroll } from "../hooks/UseFadeInOnScroll";
 
-import asset1 from "../assets/photoGal/galK.jpg"
+import asset1 from "../assets/asset1.png"
 import asset2 from "../assets/asset2.png"
 import asset3 from "../assets/photoGal/galG.jpg"
 
@@ -14,7 +14,10 @@ function Who() {
 
     return (
         <Layout>
-            <div className='flex flex-col items-center justify-center'>
+            <div 
+                className='flex flex-col items-center justify-center' style={{
+                backgroundPosition: "50% 20%"
+            }}>
                 <div ref={fadeIn1.ref} className={`${fadeIn1.className} delay-0`}>
                     <div className="w-full h-1/5 border-b-2 p-5">
                         <h1 className='text-4xl font-bold text-white'> Who Are We? </h1>
@@ -27,7 +30,8 @@ function Who() {
                             photo={asset3} 
                             headDescription="Section 1" 
                             footDescription="This is a long piece of text so I can test how the overflow works"
-                            desktopPhotoSize="h-[40vh] lg:w-[27vw]"
+                            desktopPhotoSize="h-[40vh] w-full"
+                            sectionSize="w-[29vw]"
                         />
                     </div>
                     <div ref={fadeIn2.ref} className={`${fadeIn2.className} delay-300`}>
@@ -36,7 +40,8 @@ function Who() {
                             headDescription="Photo Gallery" 
                             footDescription="See the fun and games you've missed" 
                             linkTo="/gallery"
-                            desktopPhotoSize="h-[45vh]"
+                            desktopPhotoSize="h-[49vh] w-full"
+                            sectionSize="w-[35vw]"
                         />
                     </div> 
                     <div ref={fadeIn3.ref} className={`${fadeIn3.className} delay-600`}>
@@ -45,7 +50,8 @@ function Who() {
                             headDescription="Calendar" 
                             footDescription="Find out when and where to find us" 
                             linkTo="/calendar"
-                            desktopPhotoSize="h-[40vh] lg:w-[27vw]"
+                            desktopPhotoSize="h-[40vh] w-full"
+                            sectionSize="w-[29vw]"
                         />
                     </div>
                 </div>
