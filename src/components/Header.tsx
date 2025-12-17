@@ -53,7 +53,7 @@ function Header () {
                     </ul>
 
                 <div className="flex items-center gap-4">
-                    <button className=" hidden md:flex bg-black px-5" onClick={toggleModal}><GiAcousticMegaphone size={25} color='red'/></button>
+                    <button className=" hidden md:flex bg-transparent px-5" onClick={toggleModal}><GiAcousticMegaphone size={29} color='white'/></button>
 
                     <button
                         className="md:hidden bg-transparent text-black"
@@ -66,12 +66,23 @@ function Header () {
 
             {/* Mobile Dropdown */}
             {menuOpen && (
-                <div className="md:hidden fixed w-[100vw] bg-zinc-800/95 text-white text-center pt-[20vh] pb-10 space-y-5 shadow-lg z-[400] backdrop-blur-md">
+                <div className={`md:hidden fixed w-[100vw] bg-zinc-800/95 text-white text-center pt-[20vh] pb-10 space-y-5 shadow-lg z-[400] backdrop-blur-md transition-all duration-1000 ease-in`}>
                     <div className=""><Link to="/aboutUs" className="text-gray-400 text-2xl" onClick={() => setMenuOpen(false)}>About Us</Link><br /></div>
                     <div className=""><Link to="/calendar" className="text-gray-400 text-2xl" onClick={() => setMenuOpen(false)}>Calendar</Link><br /></div>
                     <div className=""><Link to="/gallery" className="text-gray-400 text-2xl" onClick={() => setMenuOpen(false)}>Gallery</Link><br /></div>
                     <div className=""><Link to="/sponsors" className="text-gray-400 text-2xl" onClick={() => setMenuOpen(false)}>PartnerZ & SponsorZ</Link><br /></div>
-                    <div className="text-gray-400 text-2xl"><h1>More</h1></div>
+                    <div 
+                        className="text-gray-400 text-3xl"
+                        onClick={() => {
+                                setShowComingSoon(true);
+                                setTimeout(() => setShowComingSoon(false), 1800);
+                            }}   
+                    ><p>More</p></div>
+                    {showComingSoon && (
+                                <div className="absolute w-full mt-2 px-3 py-10 text-3xl rounded-md bg-black/80 text-white shadow-lg animate-fade-in">
+                                    Coming Soon
+                                </div>
+                            )}
                 </div>
             )}
             {isOpen && <EventModal activeEvent={featuredEvent} onClose={closeModal} /> }
