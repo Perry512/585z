@@ -7,9 +7,10 @@ interface ModalProps {
     isOpen: boolean;
     onClose: () => void;
     children: ReactNode;
+    dimensions?: string;
 }
 
-export default function Modal({ isOpen, onClose, children }: ModalProps) {
+export default function Modal({ isOpen, onClose, children, dimensions }: ModalProps) {
 
     const targetRef = useRef<HTMLDivElement | null>(null);
 
@@ -33,16 +34,16 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
 
     return createPortal(
             <div
-                className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 w-[100vw]"
+                className="fixed inset-0 bg-black/50 flex items-center justify-center z-[510] w-[100vw]"
                 onClick={onClose}
             >
                 <div
                     id="targetElementId"
                     ref={targetRef}
-                    className="
-                        rounded-2xl shadow-lg overflow-y-auto 
+                    className={`
+                        rounded-2xl shadow-lg overflow-y-auto ${dimensions}
                         max-h-[90vh] w-[80%] xl:w-[70%] bg-white
-                    "
+                    `}
                     onClick={(e) => e.stopPropagation()}
                 >
                 {children}
