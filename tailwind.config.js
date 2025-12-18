@@ -21,6 +21,9 @@ module.exports = {
       },
       fontFamily: {
         sans: ['"Orbitron"' , 'sans-serif'],
+      },
+      transitionProperty: {
+        'height':'height',
       }
     },
   },
