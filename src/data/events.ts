@@ -1,5 +1,5 @@
 import JBR1 from "../assets/eventFliers/JBRoc_2_Flyer.png"
-import JBR2 from "../assets/eventFliers/DTWN585_JBR_Flyer_V2.png";
+import JBR2 from "../assets/eventFliers/JBROC_splash.png";
 import LR12 from "../assets/eventFliers/Lets_ROC_12_Flyer.png";
 import LR13 from "../assets/eventFliers/Lets_ROC_13_Flyer.png";
 import LR14 from "../assets/eventFliers/lr14_flyer.png";
@@ -18,6 +18,19 @@ import lr13ggstt8 from "../assets/results/lr13/lr13ggstt8.jpg";
 import lr13ssbut8 from "../assets/results/lr13/lr13ssbut8.jpg";
 import lr13roa2t8 from "../assets/results/lr13/lr13roa2t8.jpg";
 import lr13roat8 from "../assets/results/lr13/lr13roat8.jpg";
+
+import jbrt8t8 from "../assets/results/jbr2/JBR_T8_Top_8.png";
+import jbrSF6t8 from "../assets/results/jbr2/JBR_SF6_Top_8.png";
+import jbrR1t8 from "../assets/results/jbr2/JBR_Rivals_1_Top_8.png";
+import jbrR2t8 from "../assets/results/jbr2/JBR_Rivals_2_Top_8.png";
+import jbrUNI2t8 from "../assets/results/jbr2/JBR_UNI_2_Top_8.png";
+import jbrGGSTt8 from "../assets/results/jbr2/JBR_Strive_Top_8.png";
+import jbr2Xt8 from "../assets/results/jbr2/JBR_2XKO_Top_8.png";
+import jbrSF6t4 from "../assets/results/jbr2/sf6t4.jpg";
+import jbrt8t4 from "../assets/results/jbr2/t8t4.jpg";
+import jbruni2t4 from "../assets/results/jbr2/UNIt4.jpg";
+import jbr2xt4 from "../assets/results/jbr2/2xt4.jpg";
+import jbrggstt4 from "../assets/results/jbr2/ggstt4.jpg";
 
 import type { Event } from "../types/Event"
 
@@ -117,7 +130,7 @@ const eventsData: Event[] = [
         location: "GLG Lounge",
         background: LR14,
         registrationSlug: "let-s-roc-14",
-        isFeatured:true,
+        tournament: true,
     },
     {
         id: 5,
@@ -130,6 +143,43 @@ const eventsData: Event[] = [
         background: JBR1,
         flier: JBR2,
         registrationSlug: "jingle-bell-roc-2-2",
+        isFeatured:true,
+        tournament: true,
+        results: [
+            {
+                game:"Street Fighter 6",
+                top8Graphic:jbrSF6t8,
+                top3Photo:jbrSF6t4,
+            },
+            {
+                game:"Tekken 8",
+                top8Graphic:jbrt8t8,
+                top3Photo:jbrt8t4,
+            },
+            {
+                game:"Rivals of Aether 2",
+                top8Graphic:jbrR2t8,
+            },
+            {
+                game:"Rivals of Aether 1",
+                top8Graphic:jbrR1t8,
+            },
+            {
+                game:"UNI-2",
+                top8Graphic:jbrUNI2t8,
+                top3Photo:jbruni2t4,
+            },
+            {
+                game:"Guilty Gear Strive",
+                top8Graphic:jbrGGSTt8,
+                top3Photo:jbrggstt4,
+            },
+            {
+                game:"2XKO",
+                top8Graphic:jbr2Xt8,
+                top3Photo:jbr2xt4,
+            },     
+        ]
     },
         {
         id: 6,
