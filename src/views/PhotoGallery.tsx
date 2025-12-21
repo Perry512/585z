@@ -2,6 +2,7 @@ import { useState } from "react";
 import Modal from "../components/Modal"
 import { photos } from "../data/photos";
 import type { Photo } from "../types/Photo";
+import LazyImage from "../components/LazyImage";
 
 export default function PhotoGallery() {
     const [activePhoto, setActivePhoto] = useState<Photo | null>(null);
@@ -20,7 +21,7 @@ export default function PhotoGallery() {
                             className="relative group cursor-pointer overflow-hidden"
                             onClick={() => setActivePhoto(photo)}
                         >
-                            <img
+                            <LazyImage
                                 src={photo.src}
                                 alt={photo.alt}
                                 className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105" 
@@ -38,7 +39,7 @@ export default function PhotoGallery() {
             <Modal isOpen={!!activePhoto} onClose={() => setActivePhoto(null)}>
                 {activePhoto && (
                     <div className="flex flex-col items-center">
-                        <img
+                        <LazyImage
                             src={activePhoto.src}
                             alt={activePhoto.alt}
                             className="max-h-[80vh] object-contain"
