@@ -27,7 +27,7 @@ function Header () {
                     onClick={() => {if(menuOpen) { setMenuOpen(false); }}}
                 >
                     <img src={logo2} className="h-[60px] md:h-10 mr-3 -translate-y-1" alt="585Z Logo" />
-                    <span className="hidden md:flex text-xl translate-y-1 hover:text-gray-400 drop-shadow-[0_4.2px_4.2px_rgba(1,1,1,0.8)] hover:scale-[1.1] hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.55)] transition delay-100 duration-200"> 585FighterZ</span>
+                    <span className="hidden md:flex text-xl translate-y-1 drop-shadow-[0_4.2px_4.2px_rgba(1,1,1,0.8)] menu-link"> 585FighterZ</span>
                 </Link>
 
                 {/* Desktop View */}
@@ -66,7 +66,16 @@ function Header () {
 
             {/* Mobile Dropdown */}
             {menuOpen && (
-                <div className={`md:hidden fixed w-[100vw] bg-zinc-800/95 text-white text-center pt-[20vh] pb-10 space-y-5 shadow-lg z-[400] backdrop-blur-md transition-all duration-1000 ease-in`}>
+                <div className={`
+                        md:hidden fixed inset-0 z-[400]
+                        bg-zinc-800/95 backdrop-blur-md
+                        flex flex-col items-center justify-center gap-6
+                        transition-all duration-500 ease-in-out
+                        ${menuOpen
+                        ? "opacity-100 translate-y-0 pointer-events-auto"
+                        : "opacity-0 -translate-y-100 pointer-events-none"
+                        }
+                    `}>
                     <div className=""><Link to="/aboutUs" className="text-gray-400 text-2xl" onClick={() => setMenuOpen(false)}>About Us</Link><br /></div>
                     <div className=""><Link to="/calendar" className="text-gray-400 text-2xl" onClick={() => setMenuOpen(false)}>Calendar</Link><br /></div>
                     <div className=""><Link to="/gallery" className="text-gray-400 text-2xl" onClick={() => setMenuOpen(false)}>Gallery</Link><br /></div>
@@ -77,7 +86,7 @@ function Header () {
                                 setShowComingSoon(true);
                                 setTimeout(() => setShowComingSoon(false), 1800);
                             }}   
-                    ><p>More</p></div>
+                    ><p>More...</p></div>
                     {showComingSoon && (
                                 <div className="absolute w-full mt-2 px-3 py-10 text-3xl rounded-md bg-black/80 text-white shadow-lg animate-fade-in">
                                     Coming Soon
