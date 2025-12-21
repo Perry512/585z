@@ -37,7 +37,7 @@ import type { Event } from "../types/Event"
 const eventsData: Event[] = [
     {
         id: 1,
-        date: "2025-10-25",
+        date: "2025-08-25",
         dateOnFlyer: false,
         eventName: "Let's Roc 12",
         eventType: "Monthly",
@@ -136,7 +136,7 @@ const eventsData: Event[] = [
         id: 5,
         date: "2025-12-13",
         dateOnFlyer: false,
-        eventName: "Jingle Bell Roc",
+        eventName: "Jingle Bell Roc 2",
         eventType: "Regional",
         gamesPlayed: ["Rivals of Aether 1", "Rivals of Aether 2", "Street Fighter 6", "Tekken 8", "Super Smash Bros. Melee", "Super Smash Bros. Ultimate"],
         location: "Kate Gleason Auditorium",
