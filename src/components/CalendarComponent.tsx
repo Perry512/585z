@@ -13,15 +13,21 @@ export default function CalendarComponent() {
 
     const now = new Date();
 
-    const {upcomingEvents, pastEvents } = useMemo(() => {
-        const sorted = [...eventsData].sort(
-            (a, b) => new Date(a.date).getTime()- new Date(b.date).getTime()
+    const { upcomingEvents, pastEvents } = useMemo(() => {
+        const sortedAsc = [...eventsData].sort(
+            (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
         );
 
-        const upcoming = sorted.filter((e) => new Date(e.date) >= now);
-        const past = sorted.filter((e) => new Date(e.date) < now);
+        const upcoming = sortedAsc.filter(e => new Date(e.date) >= now);
 
-        return { upcomingEvents: upcoming, pastEvents: past };
+        const past = sortedAsc
+            .filter(e => new Date(e.date) < now)
+            .reverse();
+
+        return {
+            upcomingEvents: upcoming,
+            pastEvents: past,
+        };
     }, []);
 
     const renderEventCard = (event: Event) => (
