@@ -12,6 +12,7 @@ import Gibbs from "../assets/profilePictures/gibbs.png";
 import Tyger from "../assets/profilePictures/tyger.jpg";
 import Gabby from "../assets/profilePictures/gabby.png";
 import lazyTitan from "../assets/profilePictures/lazytitan.jpeg";
+import Ares from "../assets/profilePictures/IMG_8297 - Amarri Brown.png"
 
 export const team: Person[] = [
     {
@@ -220,15 +221,20 @@ export const team: Person[] = [
     },
         {
         id:12,
-        name: "The Clobber",
+        name: "Amarri Brown",
+        tag: "AresInferno",
         pronouns: "He/Him",
-        role: "Media Director",
+        role: "Competitor/Coach",
         location: "Rochester, NY",
         contact: {
-            [SocialPlatform.Discord]: ".megameme"
+            [SocialPlatform.X]: "AresInferno",
+            [SocialPlatform.Twitch]: "AresInferno",
+            [SocialPlatform.YouTube]: "AresInferno",
+            [SocialPlatform.Discord]: "aresinferno"
         },
-        bio: "test test test3",
-        imageUrl: TheClobber
+        bio: "My name is Amarri, but get called Ares. I have a Bachelors degree in Electrical Engineering and currently work as an engineer. My hobbies consists of playing video games, golfing, playing guitar, and restoring a 1969 Mustang! I currently play Tekken 8 with Armor King being my main.",
+        imageUrl: Ares,
+        gamesPlayed: [ games.find(g => g.Title === "Tekken 8")! ]
     },
         {
         id:13,
