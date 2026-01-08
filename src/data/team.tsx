@@ -1,6 +1,8 @@
 import type { Person } from "../types/Person";
 import { SocialPlatform } from "../types/Social";
 import games from "./games";
+
+import Dan from "../assets/profilePictures/dan.png"
 import TheClobber from "../assets/TheClobber.png";
 import JoeIdaho from "../assets/profilePictures/joeidaho.jpg";
 import MadWRLD from "../assets/profilePictures/madwrld.jpg";
@@ -17,15 +19,16 @@ import Ares from "../assets/profilePictures/IMG_8297 - Amarri Brown.png"
 export const team: Person[] = [
     {
         id:1,
-        name: "The Clobber",
+        name: "Daniel Humphrey",
+        tag: "D.Antonio",
         pronouns: "He/Him",
-        role: "Media Director",
+        role: "585Z Commander",
         location: "Rochester, NY",
         contact: {
             [SocialPlatform.Discord]: ".megameme"
         },
         bio: "test test test1",
-        imageUrl: TheClobber,
+        imageUrl: Dan,
         gamesPlayed: [
             games.find(g => g.Title === "Street Fighter 6")!,
         ],
