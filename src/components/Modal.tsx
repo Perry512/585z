@@ -8,9 +8,10 @@ interface ModalProps {
     onClose: () => void;
     children: ReactNode;
     dimensions?: string;
+    transparent?: boolean;
 }
 
-export default function Modal({ isOpen, onClose, children, dimensions }: ModalProps) {
+export default function Modal({ isOpen, onClose, children, dimensions, transparent }: ModalProps) {
 
     const targetRef = useRef<HTMLDivElement | null>(null);
 
@@ -42,9 +43,11 @@ export default function Modal({ isOpen, onClose, children, dimensions }: ModalPr
                     ref={targetRef}
                     className={`
                         rounded-2xl shadow-lg overflow-y-auto ${dimensions}
-                        max-h-[90vh] w-[80%] xl:w-[70%] bg-white
+                        max-h-[90vh] w-[80%] xl:w-[70%] ${transparent? "bg-transparent" :"bg-white"}
                     `}
-                    onClick={(e) => e.stopPropagation()}
+                    onClick={
+                        transparent? onClose : (e) => e.stopPropagation()   
+                    }
                 >
                 {children}
             </div>
