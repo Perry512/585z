@@ -36,7 +36,7 @@ export default function PhotoGallery() {
                 </div>
             </div>
 
-            <Modal isOpen={!!activePhoto} onClose={() => setActivePhoto(null)}>
+            <Modal isOpen={!!activePhoto} onClose={() => setActivePhoto(null)} transparent={true}>
                 {activePhoto && (
                     <div className="flex flex-col items-center">
                         <LazyImage
