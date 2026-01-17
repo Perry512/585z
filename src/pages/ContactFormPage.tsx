@@ -33,7 +33,7 @@ export default function ContactFormPage() {
     
         try {
             const res = await fetch(
-                "https://forminit.com/f/mwbrmk5053p",
+                "https://usebasin.com/f/d4c864440428",
                 {
                     method: "POST",
                     body: payload,
