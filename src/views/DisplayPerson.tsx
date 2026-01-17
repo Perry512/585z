@@ -1,10 +1,7 @@
 import React from "react"
 import { IoMdClose } from "react-icons/io";
 import type { Person } from "../types/Person";
-import type { SocialLinks } from "../types/Social";
-import { SocialPlatform } from "../types/Social"
 import SocialLinksDisplay from "../components/SocialLinkDisplay"
-
 
 interface PersonViewProps extends Person {
   onClose?: () => void;
