@@ -1,6 +1,6 @@
 import CalendarComponent from "../components/CalendarComponent"
 import Layout from "../components/Layout"
-import gal4 from "../assets/photoGal/gal4.jpg"
+import gal4 from "/photoGal/gal4.jpg"
 
 export default function CalendarPage() {
     return (
