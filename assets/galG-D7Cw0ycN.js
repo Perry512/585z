@@ -1,1 +1,0 @@
-const e="/585z/assets/galE-t401HOxk.jpg",o=Object.freeze(Object.defineProperty({__proto__:null,default:e},Symbol.toStringTag,{value:"Module"})),t="/585z/assets/galG-BvUa5nV7.jpg",_=Object.freeze(Object.defineProperty({__proto__:null,default:t},Symbol.toStringTag,{value:"Module"}));export{_,t as a,o as b,e as d};
