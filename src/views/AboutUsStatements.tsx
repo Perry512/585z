@@ -1,4 +1,5 @@
 import hexes from "../assets/Hex_Example.png";
+import photo from "../../public/photoGal/galBA.jpg"
 
 export default function AboutUsStatements() {
     return(
@@ -7,7 +8,7 @@ export default function AboutUsStatements() {
             {/* Background */}
             <div className="absolute inset-0 opacity-10 bg-center bg-[length:700px] pointer-events-none" style={{ backgroundImage: `url(${hexes})`, backgroundPosition: "50% 20%"}} />
 
-            <div className="relative z-10">
+            <div className="relative z-10 flex sm:flex-col md:flex-row lg:flex-row">
                 {/* Text Statement */}
                 <div className="md:w-1/2 space-y-6 flex flex-col justify-center align-middle">
                     <h2 className="font-bold text-3xl md:text-5xl translate-x-2">
@@ -21,10 +22,13 @@ export default function AboutUsStatements() {
                         </div>
                         <div>
                             <p className="text-gray-300 max-w-lg w-full text-center">
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In accumsan efficitur sem, et consectetur est venenatis a. In vel lorem felis. Suspendisse lobortis nec ex sit amet lobortis. Nunc id vehicula felis. Sed semper est ac odio varius, nec fermentum tellus semper. Proin imperdiet ullamcorper ullamcorper. Sed quam tortor, placerat ut convallis nec, aliquet vel nisi. Sed id tellus sit amet elit aliquam ullamcorper. Vestibulum nunc erat, maximus a risus sit amet, egestas dictum risus. Nunc consectetur fermentum augue, a pretium ante dictum non. Morbi feugiat erat tellus, sit amet vestibulum sapien fringilla eget. Etiam consectetur urna id turpis iaculis vulputate. Fusce accumsan nisi at leo aliquam tincidunt."
+                                "585FighterZ Esports is a fighting game group from Rochester, New York. We provide entertainment and education for the Fighting Game Community. Through hosting Esports tournaments, developing instructional content and facilitating events, we are developing the next generation of gamers. Our goal is to entertain the masses with our commentary, education, events and other various content. We aim to be a pioneer enterprise in New York and a household name in the Esports Community. We are also recognized an official vendor of the City of Rochester for Esports events."
                             </p>
                         </div>
                     </div>
+                </div>
+                <div className="md:w-1/2 w-full flex justify-center items-center">
+                    <div className="w-full h-[300px] md:h-[450px] lg:h-[450px] bg-cover bg-center rounded-2xl brightness-75" style={{ backgroundImage: `url(${photo})`}}> </div>
                 </div>
             </div>
         </section>
