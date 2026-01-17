@@ -4,7 +4,7 @@ import { useFadeInOnScroll } from "../hooks/UseFadeInOnScroll";
 
 import asset1 from "../assets/asset1.png"
 import asset2 from "../assets/asset2.png"
-import asset3 from "../assets/photoGal/galG.jpg"
+import asset3 from "/photoGal/galG.jpg"
 
 function Who() {
 
@@ -25,13 +25,14 @@ function Who() {
                     </div>
                 </div>
                 <div className="flex flex-col items-center lg:flex-row gap-5 lg:px-10 mb-20">
-                    <div ref={fadeIn1.ref} className={`${fadeIn1.className} delay-0`}>
+                    <div ref={fadeIn1.ref} className={`${fadeIn1.className}`}>
                         <WhoAreWeSection 
                             photo={asset3} 
-                            headDescription="Section 1" 
-                            footDescription="This is a long piece of text so I can test how the overflow works"
+                            headDescription="The 585FighterZ" 
+                            footDescription="Learn more about our team!"
                             desktopPhotoSize="h-[40vh] w-full"
                             sectionSize="w-[29vw]"
+                            linkTo="/aboutUs"
                         />
                     </div>
                     <div ref={fadeIn2.ref} className={`${fadeIn2.className} delay-300`}>
