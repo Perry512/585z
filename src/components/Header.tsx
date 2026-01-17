@@ -18,24 +18,26 @@ function Header () {
 
     return ( 
         <>
-            <header className="flex justify-between items-center w-[100vw] px-6 py-4 fixed left-0 top-0 z-[500] bg-gradient-to-b from-red-800 via-red-900/90 to-zinc-800/70 backdrop-blur-md shadow-md"> 
+            <header className="flex items-center w-full px-6 py-4 fixed top-0 z-[500] bg-gradient-to-b from-red-800 via-red-900/90 to-zinc-800/70 backdrop-blur-md shadow-md"> 
 
                 {/* Logo */}
+                <div className="flex-shrink-0 w-[28vw] lg:w-[13vw]">
                 <Link 
                     to="/home" 
-                    className="text-white hover:text-red-700 transition duration-300 ease-in-out text-lg flex flex-row"
+                    className="text-white transition duration-300 ease-in-out text-lg flex flex-row"
                     onClick={() => {if(menuOpen) { setMenuOpen(false); }}}
                 >
                     <img src={logo2} className="h-[60px] md:h-10 mr-3 -translate-y-1" alt="585Z Logo" />
-                    <span className="hidden md:flex text-xl translate-y-1 drop-shadow-[0_4.2px_4.2px_rgba(1,1,1,0.8)] menu-link"> 585FighterZ</span>
+                    <span className="hidden md:block text-xl truncate drop-shadow-[0_4.2px_4.2px_rgba(1,1,1,0.8)]"> 585FighterZ</span>
                 </Link>
+                </div>
 
                 {/* Desktop View */}
-                    <ul className='hidden md:flex text-lg -translate-x-10'>
+                    <ul className='hidden md:flex flex-1 min-w-0 justify-center gap-8 text-lg'>
                         <li className="inline-block drop-shadow-[0_4.2px_4.2px_rgba(1,1,1,0.8)] mr-10"> <Link to="/aboutUs" className="menu-link"> About Us </Link> </li>
                         <li className="inline-block drop-shadow-[0_4.2px_4.2px_rgba(1,1,1,0.8)] mr-10"> <Link to="/calendar" className="menu-link"> Calendar</Link></li>
                         <li className="inline-block drop-shadow-[0_4.2px_4.2px_rgba(1,1,1,0.8)] mr-10"> <Link to="/gallery" className="menu-link">Gallery</Link></li>
-                        <li className="inline-block drop-shadow-[0_4.2px_4.2px_rgba(1,1,1,0.8)] mr-10"> <Link to="/sponsors" className="menu-link">PartnerZ & SponsorZ </Link></li>
+                        <li className="inline-block drop-shadow-[0_4.2px_4.2px_rgba(1,1,1,0.8)] mr-10"> <Link to="/sponsors" className="menu-link"><span className="hidden lg:inline">PartnerZ & SponsorZ </span> <span className="lg:hidden">PartnerZ</span></Link></li>
                         <li 
                             className="inline-block drop-shadow-[0_4.2px_4.2px_rgba(1,1,1,0.8)] mr-10"
                             onClick={() => {
