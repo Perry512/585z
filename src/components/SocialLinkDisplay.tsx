@@ -32,7 +32,7 @@ const SocialLinksDisplay: React.FC<SocialLinkDisplayProps> = ({ contacts }) => {
                         href={href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-600 hover:text-red-600 transition flex flex-row"
+                        className="w-full text-gray-600 hover:text-red-600 transition flex flex-row overflow-scroll"
                         title={platform}
                     >
                         {/* Icon */}
