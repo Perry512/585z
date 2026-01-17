@@ -1,11 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "../components/Modal"
-import { photos } from "../data/photos";
 import type { Photo } from "../types/Photo";
 import LazyImage from "../components/LazyImage";
+import { loadPhotos } from "../data/photos";
 
 export default function PhotoGallery() {
+
+    const [photos, setPhotos] = useState<Photo[]>([])
     const [activePhoto, setActivePhoto] = useState<Photo | null>(null);
+    
+    useEffect(() => {
+        loadPhotos().then(setPhotos);
+    }, [])
 
     return (
         <>
