@@ -1,16 +1,32 @@
 import type { Photo } from "../types/Photo";
-import metadata from "../assets/photoGal/metadata.json";
 
-const images = import.meta.glob("../assets/photoGal/*.{png,jpg,jpeg,webp,JPG}", { eager: true });
+export async function loadPhotos(): Promise<Photo[]> {
+    const base = import.meta.env.BASE_URL + "photoGal/";
 
-export const photos: Photo[] = Object.entries(images).map(([path, module], index) => {
-    const fileName = path.split("/").pop()!;
-    const meta = (metadata as Record<string, { alt?: string; description?: string}>)[fileName] ?? {};
+    const [fileRes, metaRes] = await Promise.all([
+        fetch(`${base}photos.json`),
+        fetch(`${base}metadata.json`)
+    ]);
 
-    return { 
-        id: index + 1,
-        src: (module as { default: string}).default,
-        alt: meta.alt ?? fileName,
-        description: meta.description ?? "",
-    };
-});
+    if (!fileRes.ok) {
+        throw new Error("Failed to load photo metadata")
+    }
+
+    const files = await fileRes.json() as string[];
+
+    const metadata= metaRes.ok
+        ? await metaRes.json()
+        : {};
+
+    return files.map((fileName, index) => {
+        const meta = metadata[fileName] ?? {};
+    
+
+        return { 
+            id: index + 1,
+            src: `${base}${fileName}`,
+            alt: meta.alt ?? fileName,
+            description: meta.description ?? "",   
+        };
+    });
+};
