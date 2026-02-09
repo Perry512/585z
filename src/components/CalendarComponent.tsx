@@ -34,14 +34,15 @@ export default function CalendarComponent() {
         <div
             key={event.id}
             onClick={() => setActiveEvent(event)}
-            className="relative rounded-md overflow-hidden cursor-pointer transition-transform aspect-[3/4] w-[350px] hover:scale-[1.03]"
+            className="relative group rounded-md overflow-hidden cursor-pointer transition-transform aspect-[3/4] w-[350px] hover:scale-[1.03]"
         >
             <img
                 src={event.background}
                 alt={event.eventName}
-                className="w-full bg-fit object-contain opacity-80"
+                className="w-full h-full object-contain transition-opacity duration-300 group-hover:opacity-60"
             />
-            <div className="absolute top-2 right-50 text-white font-bold py-1 flex flex-row justify-center">
+            
+            <div className="absolute top-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 {event.dateOnFlyer !== false && (
                     <p className="text-2xl text-gray-300 flex flex-row justify-center">
                         {new Date(event.date).toLocaleDateString(undefined, {
@@ -51,7 +52,9 @@ export default function CalendarComponent() {
                     </p>
                 )}
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-4 flex flex-col justify-end">
+
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-4 flex flex-col justify-end
+                opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <h3 className="text-lg font-bold">{event.eventName}</h3>
                 <p className="text-sm text-yellow-400">{event.eventType}</p>
                 <p className="text-xs text-gray-400 mt-1">
