@@ -1,14 +1,14 @@
 import Home from "../pages/Home";
-import MeetV2 from "../pages/MeetV2";
 import ContactFormPage from "../pages/ContactFormPage";
 import Who from "../pages/Who";
+import DiscordWidget from "../components/DiscordWidget";
 
 const HomePageView = () => {
     return (
         <>
             <Home />
             <Who />
-            <MeetV2 />
+            <DiscordWidget />
             <ContactFormPage />
         </>
     )
