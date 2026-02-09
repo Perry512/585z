@@ -24,7 +24,7 @@ function Header () {
                 <div className="flex-shrink-0 w-[28vw] lg:w-[13vw]">
                 <Link 
                     to="/home" 
-                    className="text-white transition duration-300 ease-in-out text-lg flex flex-row"
+                    className="text-white hover:text-white visited:text-white focus:text-white transition duration-300 ease-in-out text-lg flex flex-row"
                     onClick={() => {if(menuOpen) { setMenuOpen(false); }}}
                 >
                     <img src={logo2} className="h-[60px] md:h-10 mr-3 -translate-y-1" alt="585Z Logo" />
