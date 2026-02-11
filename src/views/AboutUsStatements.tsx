@@ -1,5 +1,5 @@
 import hexes from "../assets/Hex_Example.png";
-import photo from "../../public/photoGal/galBA.jpg"
+import photo from "/photoGal/galBA.jpg"
 
 export default function AboutUsStatements() {
     return(
