@@ -55,7 +55,7 @@ function Header () {
                     </ul>
 
                 <div className="flex items-center gap-4">
-                    <button className=" hidden md:flex bg-transparent px-5" onClick={toggleModal}><GiAcousticMegaphone size={29} color='white'/></button>
+                    <button className=" hidden md:flex bg-transparent px-5" onClick={toggleModal}><GiAcousticMegaphone size={29} color='white' name='Menu' role='button'/></button>
 
                     <button
                         className="md:hidden bg-transparent text-black"
