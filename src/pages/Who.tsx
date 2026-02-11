@@ -8,17 +8,19 @@ import asset3 from "/photoGal/galG.jpg"
 
 function Who() {
 
-    const fadeIn1 = useFadeInOnScroll();
-    const fadeIn2 = useFadeInOnScroll();
-    const fadeIn3 = useFadeInOnScroll();
+    const headerFade = useFadeInOnScroll<HTMLDivElement>();
+    const fadeIn1 = useFadeInOnScroll<HTMLDivElement>(0);
+    const fadeIn2 = useFadeInOnScroll<HTMLDivElement>(200);
+    const fadeIn3 = useFadeInOnScroll<HTMLDivElement>(400);
 
     return (
         <Layout>
+            <div ref={headerFade.ref} className={headerFade.className} style={headerFade.style} />
             <div 
                 className='flex flex-col items-center justify-center' style={{
                 backgroundPosition: "50% 20%"
             }}>
-                <div ref={fadeIn1.ref} className={`${fadeIn1.className} delay-0`}>
+                <div ref={fadeIn1.ref} className={`${fadeIn1.className}`}>
                     <div className="w-full h-1/5 border-b-2 p-5">
                         <h1 className='text-4xl font-bold text-white'> Who Are We? </h1>
                         <p className='text-white'> We play video games in Innonvation tower sometimes for money </p>
@@ -35,7 +37,7 @@ function Who() {
                             linkTo="/aboutUs"
                         />
                     </div>
-                    <div ref={fadeIn2.ref} className={`${fadeIn2.className} delay-300`}>
+                    <div ref={fadeIn2.ref} className={`${fadeIn2.className}`}>
                         <WhoAreWeSection 
                             photo={asset2} 
                             headDescription="Photo Gallery" 
@@ -45,7 +47,7 @@ function Who() {
                             sectionSize="w-[35vw]"
                         />
                     </div> 
-                    <div ref={fadeIn3.ref} className={`${fadeIn3.className} delay-600`}>
+                    <div ref={fadeIn3.ref} className={`${fadeIn3.className}`}>
                         <WhoAreWeSection 
                             photo={asset1} 
                             headDescription="Calendar" 
