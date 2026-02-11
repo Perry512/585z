@@ -33,9 +33,7 @@ export default function DiscordWidget() {
                         <iframe
                             src="https://discord.com/widget?id=484510910942150668&theme=dark"
                             width="350"
-                            height="500"
-                            allowTransparency={true}
-                            frameBorder="0"
+                            height="400"
                             sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
                             title="Discord Server"
                         />
